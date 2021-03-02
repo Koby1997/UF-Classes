@@ -1,0 +1,245 @@
+C:\Users\Koby\AppData\Local\Android\Sdk\platform-tools\adb.exe connect 192.168.221.129
+
+____________________________________________________________
+#define _CRT_SECURE_NO_DEPRECATE
+
+#include <iostream>
+#include <fstream>
+#include <string.h>
+
+using namespace std;
+
+char *read_file(const char *filename);
+
+int main(int argc, char *argv[])
+{
+    char *ptr;
+    //call the function read_file
+    ptr = read_file(argv[]);
+    cout<<"File content : \n"<< ptr;
+    delete ptr;
+    return 0;
+}
+
+char *read_file(const char *filename)
+{
+    ifstream in;
+    char *buffer = NULL;
+    char *temp = NULL;
+    char ch;
+    int count = 0;
+    int lineLength = 128;
+
+    in.open(filename);
+    if (!in)
+    {
+        return nullptr;
+    }
+
+    //allocate memory for the buffer to maximum line length
+    buffer = new char[lineLength];
+    while (!in.eof() && in.good())
+    {
+        in.clear();
+        in.get(ch);
+        if (ch == EOF)
+            break;
+        if (count == lineLength)
+        {
+            lineLength += 128;
+            //reallocate buffer to hold new buffer size
+            temp = new char[strlen(buffer) + 1];
+            strcpy(temp, buffer);
+            delete buffer;
+            buffer = new char[lineLength];
+            strcpy(buffer, temp);
+            delete temp;
+        }
+        buffer[count++] = ch;
+        ch = '\0';
+    }
+
+    buffer[count] = '\0';
+    if(!temp)
+        delete temp;
+
+    return buffer;
+}
+______________________________________________________________________________
+
+read_file.cpp
+
+
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <sys/types.h>
+#include <fstream>
+#include <string.h>
+#include "read_file.h"
+
+using namespace std;
+
+
+char *read_file(const char *filename)
+{
+    int fd = open(filename, O_RDONLY);
+    if(fd == -1)
+    {
+        //printf("just checking, in bad file");
+        return nullptr;
+    }
+
+    off_t file_size = lseek(fd, 0, SEEK_END);//find size
+    lseek(fd, 0, SEEK_SET); //go back to start
+    char *buff = (char*)malloc(file_size + 1);//+1 for null at end
+
+    ssize_t bytes_read = 0;
+
+    while((bytes_read = read(fd, buff, 1024))>0)
+    {}
+
+    close(fd);
+    return buff;
+}
+
+_______________________________________________________________________________
+
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <sys/types.h>
+#include <stdlib.h>
+#include <string.h>
+#include "read_file.h"
+
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+    const char *filename = argv[1];
+
+    char *ptr = read_file(filename);
+    if(ptr == nullptr)
+    {
+        cout<<"Error: File Not Found\n";
+        delete ptr;
+        return 0;
+    }
+    cout<<ptr;
+    delete ptr;
+    return 0;
+}
+_____________________________________________________________________________
+
+c++ -o displayfile displayfile.cpp read_file.cpp
+
+/mnt/ubuntu/home/reptilian/myfile.txt
+
+_________
+displayfile.cpp
+
+#include <iostream>
+#include <unistd.h>
+#include <stdio.h>
+#include "read_file.h"
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+    const char *filename = argv[1];
+    char *ptr = read_file(filename);
+    if(ptr == nullptr)
+    {
+        cout<<"Error: File Not Found\n";
+        delete ptr;
+        return 0;
+    }
+    cout<<ptr;
+    delete ptr;
+    return 0;
+}
+__________________________________
+
+#include <iostream>
+#include <unistd.h>
+#include <stdio.h>
+#include "read_file.h"
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+    const char *filename = argv[1];
+
+    char *ptr = displayfile(filename);
+    delete ptr;
+    return 0;
+}
+
+char *displayfile(const char *filename)
+{
+    char *ptr = read_file(filename);
+    if(ptr == nullptr)
+    {
+        cout<<"Error: File Not Found\n";
+        delete ptr;
+        return nullptr;
+    }
+    cout<<ptr;
+    return ptr;
+}DIS ONE
+
+_________________________________________
+native-calls
+
+#include <jni.h>
+#include <string>
+#include "read_file.h"
+
+extern "C"
+JNIEXPORT jstring JNICALL
+Java_edu_ufl_cise_os_p2_P2Activity_stringFromJNI(JNIEnv *env, jobject /* this */)
+{
+    std::string hello = "Hello from C++";
+    return env->NewStringUTF(hello.c_str());
+}
+
+extern "C"
+JNIEXPORT jstring JNICALL
+Java_edu_ufl_cise_os_p2_P2Activity_readFile(JNIEnv *env, jobject, jstring input)
+{
+    const char *filename = (*env).GetStringUTFChars(input, 0);
+    return env->NewStringUTF(read_file(filename));
+}
+
+extern "C"
+JNIEXPORT jstring JNICALL
+Java_edu_ufl_cise_os_p2_P2Activity_displayfile(JNIEnv *env, jobject, jstring input)
+{
+    const char *filename = (*env).GetStringUTFChars(input, 0);
+    return env->NewStringUTF(displayfile(filename));
+}
+_____________________________________________________
+
+References:
+https://erev0s.com/blog/add-jnicc-your-existing-android-app/
+https://www.protechtraining.com/content/java_fundamentals_tutorial-_java_native_interface_jni
+https://www.studytonight.com/android/get-edittext-set-textview
+https://developer.android.com/studio/profile/memory-profiler
+https://developer.android.com/training/basics/firstapp/starting-activity#java
+https://developer.android.com/reference/android/view/View
+https://developer.android.com/studio/projects/configure-cmake
+And a lot of stack overflow haha
+
+
+
+
+echo 'my file contents here' > foo.txt
+
+
+
+

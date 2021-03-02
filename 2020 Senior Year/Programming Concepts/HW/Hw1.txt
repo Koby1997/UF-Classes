@@ -1,0 +1,76 @@
+Answer whether the following lines of code from this fragment will (Valid) or will not (Invalid) be parsed by our Compiler grammar?
+
+int i;							// Invalid (mainly off of how I see the language works. However,
+								// couldn't this be 2 identifiers which could then be 2 primary
+								// expressions, all the way up to becoming 1 expression?)
+
+LET j : double;  				// Valid
+pi = 3.14; 						// Valid
+pi = 3.14.14; 					// Invalid
+pi = i + j * (x - 3); 			// Valid
+LET ch : char = 'a'; 			// Invalid (no char type)
+LET var : char; 				// Invalid (no char type)
+LET str : STRING = "sample"; 	// Valid
+PRINT(str); 					// Valid
+i = PRINT(str); 				// Invalid (going with the assumption PRINT returns void. None of our types can be void)
+
+
+Answer whether this block of code will (Valid) or will not (Invalid) be parsed by our Compiler grammar?
+
+LET i : integer = 10;			// Valid
+WHILE FALSE DO
+  i = i + 1;
+  PRINT(i);
+END
+
+
+Answer whether this block of code will (Valid) or will not (Invalid) be parsed by our Compiler grammar?
+
+LET i : integer = 10;			// Invalid (because of {})
+WHILE i != 0 DO {
+  i = i + 1;
+  PRINT(i);
+} END
+
+
+Answer whether this block of code will (Valid) or will not (Invalid) be parsed by our Compiler grammar?
+
+LET i : integer = 10;			// Invalid (because no DO or END)
+WHILE i != 0 {
+  i = i - 1;
+  PRINT(i);
+}
+
+
+
+
+
+LET decimal : INTEGER = 0;
+LET power_two : INTEGER = 1;
+
+WHILE binary != 0 DO
+	LET a : INTEGER = binary;
+	LET b : INTEGER = binary - 1;
+
+	IF b == 0 THEN 	//if here, at MSB so finished after
+		decimal = decimal + power_two;
+		b = 10000;	//Arbitrary. Just to make next IF fail
+	END
+
+	IF a/10 == b/10 THEN
+		decimal = decimal + power_two;
+	END
+
+	power_two = power_two * 2;
+	binary = binary/10;
+END
+
+
+
+
+
+END
+
+WHILE index != 0 DO
+	
+END

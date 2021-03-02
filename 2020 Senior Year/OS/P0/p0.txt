@@ -1,0 +1,26 @@
+P0: My First Kernel Mod
+Report by Koby Miller
+
+
+Files changed:
+/usr/rep/src/reptilian-kernel/init/main.c
+/mnt/sysroot/grub/menu.lst
+
+
+Changes made:
+The first step I took when completing this project was using the grep command to find the ‘rcu_end_inkernel_boot()’ call. The results pointed me toward the reptilian-kernel/init directory, more specifically the main.c file. I then found where the call was made, and I initially put a simple ‘printk()’ statement before and after the call to see how that effected the boot up. When that did nothing I took the next part of the instructions as a hint to look into log level and ended up changing my ‘printk()’ statements to ‘pr_err()’ statements. When rebooting, I noticed that it didn’t matter if I put the ‘pr_err()’ statement before or after the ‘rcu_end_inkernel_boot()’ call so I just deleted the one after the call.
+
+
+Extra credit:
+Next, I started on the extra credit. I used grep many times trying to find the file that I would need to change. Many of my grep searches didn’t help. I then turned to googling to help me understand more about GRUB. I then realized that the grub menu gives you the choice to pick from multiple kernels or types of kernels. So, I came to the conclusion that my change must come from a higher up directory than reptilian-kernel. Sure enough, I did a ‘find’ command for any directories containing ‘grub’ which lead me to the directory ‘mnt/sysroot/grub’ and more specifically ‘menu.lst’. At first, I couldn’t change the contents of the file, but a simple ‘sudo’ changed that. Once inside the file, I just added my name after the
+Honestly, after I did this change I didn’t fully understand why it worked? My thought process was still stuck in the kernel and I was confused because this change wasn’t in the kernel that I would rebuild. However, my understanding now is that this .lst file is basically just like a string in our case, and it doesn’t need to be recompiled. It is called somewhere in the code and printed out. You can even do this change and not re-make the kernel for it to be applied.
+
+
+Testing:
+This project was pretty small so there wasn’t much testing needed. I guess by putting multiple print statements and rebuilding the kernel you could count that as testing. Another thing I did was apply my .diff file to a clean VM to make sure that I did everything correctly.
+
+
+Video link:
+https://youtu.be/iBKI3UyK01s
+
+

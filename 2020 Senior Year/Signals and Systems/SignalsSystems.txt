@@ -1,0 +1,25 @@
+Teacher email: twong@ufl.edu
+
+
+
+Exam 2 notes:
+
+Look through each week
+get each big quiz and answers
+review
+past exams
+
+convolution in Time-domain = multiplication in freq-domain
+
+in piece-wise, -1 can be replaced by e^jpi
+
+
+
+
+
+
+Common things to remember:
+Time-Domain:		x[n]
+Frequency-Domain:	X(e^jw)
+
+DTFT = H(e^jw)

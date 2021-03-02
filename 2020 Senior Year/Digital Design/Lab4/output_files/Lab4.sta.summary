@@ -1,0 +1,197 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk_gen:U_CLK_GEN|partOneCounter:COUNT1|timeReached'
+Slack : -5.323
+TNS   : -21.010
+
+Type  : Slow 1200mV 85C Model Setup 'clk50MHz'
+Slack : -4.284
+TNS   : -66.390
+
+Type  : Slow 1200mV 85C Model Setup 'clk_gen:U_CLK_GEN|clk_div:DIV1|temp'
+Slack : -3.103
+TNS   : -78.923
+
+Type  : Slow 1200mV 85C Model Hold 'clk_gen:U_CLK_GEN|partOneCounter:COUNT1|timeReached'
+Slack : 0.412
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk50MHz'
+Slack : 0.645
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_gen:U_CLK_GEN|clk_div:DIV1|temp'
+Slack : 0.645
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'rst'
+Slack : -2.323
+TNS   : -8.928
+
+Type  : Slow 1200mV 85C Model Recovery 'clk_gen:U_CLK_GEN|partOneCounter:COUNT1|timeReached'
+Slack : -2.102
+TNS   : -50.719
+
+Type  : Slow 1200mV 85C Model Recovery 'clk50MHz'
+Slack : -1.881
+TNS   : -61.924
+
+Type  : Slow 1200mV 85C Model Removal 'rst'
+Slack : 1.276
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clk_gen:U_CLK_GEN|partOneCounter:COUNT1|timeReached'
+Slack : 1.513
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clk50MHz'
+Slack : 1.518
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk50MHz'
+Slack : -3.000
+TNS   : -49.299
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'rst'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_gen:U_CLK_GEN|clk_div:DIV1|temp'
+Slack : -1.403
+TNS   : -46.299
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_gen:U_CLK_GEN|partOneCounter:COUNT1|timeReached'
+Slack : -1.403
+TNS   : -42.090
+
+Type  : Slow 1200mV 0C Model Setup 'clk_gen:U_CLK_GEN|partOneCounter:COUNT1|timeReached'
+Slack : -4.891
+TNS   : -19.047
+
+Type  : Slow 1200mV 0C Model Setup 'clk50MHz'
+Slack : -3.888
+TNS   : -56.901
+
+Type  : Slow 1200mV 0C Model Setup 'clk_gen:U_CLK_GEN|clk_div:DIV1|temp'
+Slack : -2.770
+TNS   : -68.545
+
+Type  : Slow 1200mV 0C Model Hold 'clk_gen:U_CLK_GEN|partOneCounter:COUNT1|timeReached'
+Slack : 0.376
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk50MHz'
+Slack : 0.596
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk_gen:U_CLK_GEN|clk_div:DIV1|temp'
+Slack : 0.596
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'rst'
+Slack : -1.988
+TNS   : -7.648
+
+Type  : Slow 1200mV 0C Model Recovery 'clk_gen:U_CLK_GEN|partOneCounter:COUNT1|timeReached'
+Slack : -1.917
+TNS   : -45.027
+
+Type  : Slow 1200mV 0C Model Recovery 'clk50MHz'
+Slack : -1.653
+TNS   : -54.474
+
+Type  : Slow 1200mV 0C Model Removal 'rst'
+Slack : 1.252
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clk50MHz'
+Slack : 1.500
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clk_gen:U_CLK_GEN|partOneCounter:COUNT1|timeReached'
+Slack : 1.511
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk50MHz'
+Slack : -3.000
+TNS   : -49.299
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'rst'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_gen:U_CLK_GEN|clk_div:DIV1|temp'
+Slack : -1.403
+TNS   : -46.299
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_gen:U_CLK_GEN|partOneCounter:COUNT1|timeReached'
+Slack : -1.403
+TNS   : -42.090
+
+Type  : Fast 1200mV 0C Model Setup 'clk_gen:U_CLK_GEN|partOneCounter:COUNT1|timeReached'
+Slack : -1.601
+TNS   : -6.279
+
+Type  : Fast 1200mV 0C Model Setup 'clk50MHz'
+Slack : -1.329
+TNS   : -8.122
+
+Type  : Fast 1200mV 0C Model Setup 'clk_gen:U_CLK_GEN|clk_div:DIV1|temp'
+Slack : -0.680
+TNS   : -12.390
+
+Type  : Fast 1200mV 0C Model Hold 'clk_gen:U_CLK_GEN|partOneCounter:COUNT1|timeReached'
+Slack : 0.162
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk50MHz'
+Slack : 0.249
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_gen:U_CLK_GEN|clk_div:DIV1|temp'
+Slack : 0.250
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'rst'
+Slack : -1.263
+TNS   : -4.924
+
+Type  : Fast 1200mV 0C Model Recovery 'clk50MHz'
+Slack : -0.846
+TNS   : -27.550
+
+Type  : Fast 1200mV 0C Model Recovery 'clk_gen:U_CLK_GEN|partOneCounter:COUNT1|timeReached'
+Slack : -0.724
+TNS   : -20.828
+
+Type  : Fast 1200mV 0C Model Removal 'clk_gen:U_CLK_GEN|partOneCounter:COUNT1|timeReached'
+Slack : 0.367
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clk50MHz'
+Slack : 0.460
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'rst'
+Slack : 0.511
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk50MHz'
+Slack : -3.000
+TNS   : -37.134
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'rst'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_gen:U_CLK_GEN|clk_div:DIV1|temp'
+Slack : -1.000
+TNS   : -33.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_gen:U_CLK_GEN|partOneCounter:COUNT1|timeReached'
+Slack : -1.000
+TNS   : -30.000
+
+------------------------------------------------------------

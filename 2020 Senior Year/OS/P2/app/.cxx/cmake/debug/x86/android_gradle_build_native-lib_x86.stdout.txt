@@ -1,0 +1,2 @@
+ninja: Entering directory `C:\Users\Koby\Desktop\School\Fall2020\OS\P2\P2\app\.cxx\cmake\debug\x86'
+ninja: no work to do.

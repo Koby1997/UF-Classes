@@ -1,0 +1,22 @@
+Executable : C:\Users\Koby\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\cmake.exe
+arguments : 
+-HC:\Users\Koby\Desktop\Myp2Tests\app
+-DCMAKE_CXX_FLAGS=-std=c++14
+-DCMAKE_FIND_ROOT_PATH=C:\Users\Koby\Desktop\Myp2Tests\app\.cxx\cmake\debug\prefab\x86\prefab
+-DCMAKE_BUILD_TYPE=Debug
+-DCMAKE_TOOLCHAIN_FILE=C:\Users\Koby\AppData\Local\Android\Sdk\ndk\21.3.6528147\build\cmake\android.toolchain.cmake
+-DANDROID_ABI=x86
+-DANDROID_NDK=C:\Users\Koby\AppData\Local\Android\Sdk\ndk\21.3.6528147
+-DANDROID_PLATFORM=android-28
+-DCMAKE_ANDROID_ARCH_ABI=x86
+-DCMAKE_ANDROID_NDK=C:\Users\Koby\AppData\Local\Android\Sdk\ndk\21.3.6528147
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\Koby\Desktop\Myp2Tests\app\build\intermediates\cmake\debug\obj\x86
+-DCMAKE_MAKE_PROGRAM=C:\Users\Koby\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_SYSTEM_VERSION=28
+-BC:\Users\Koby\Desktop\Myp2Tests\app\.cxx\cmake\debug\x86
+-GNinja
+jvmArgs : 
+
+Build command args:

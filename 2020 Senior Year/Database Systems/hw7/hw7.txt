@@ -1,0 +1,48 @@
+Koby Miller
+Section number: 11207
+Assignment number: 7
+Date due: 3/22/2020
+
+
+# Number 1
+CREATE VIEW Most_Bookings AS
+	SELECT name, phone
+	FROM TravelAgent, AgentTripCount
+	WHERE name = agent AND cnt =
+		(SELECT MAX(cnt)
+		 FROM AgentTripCount);
+
+SELECT * FROM Most_Bookings;
+
+
+
+# Number 2
+CREATE VIEW Trips_2020 AS
+	SELECT *
+	FROM Trip
+	WHERE YEAR(start_date) = '2020';
+
+SELECT * FROM Trips_2020;
+
+
+
+# Number 3
+CREATE VIEW Traveler_Trips AS
+	SELECT traveler.ssn, traveler.name, traveler.dob, trip.id, trip.start_location, trip.end_location, trip.start_date, trip.end_date, trip.price
+	FROM Trip
+	JOIN goeson ON trip.id = goeson.id
+	JOIN traveler on traveler.ssn = goeson.ssn;
+
+SELECT * FROM Traveler_Trips;
+
+
+
+# Number 4
+CREATE VIEW Travel_Expenses AS
+	SELECT AVG(trip.price) AS Average_Price
+	FROM trip
+	JOIN goeson ON trip.id = goeson.id
+	JOIN traveler on traveler.ssn = goeson.ssn
+	GROUP BY traveler.ssn;
+
+SELECT * FROM Travel_Expenses;

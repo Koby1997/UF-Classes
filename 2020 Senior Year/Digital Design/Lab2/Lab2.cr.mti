@@ -1,0 +1,20 @@
+C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab2/alu_ns.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab2/alu_ns.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity alu_ns
+-- Compiling architecture BHV of alu_ns
+
+} {} {}} C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab2/alu_ns_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab2/alu_ns_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity alu_ns_tb
+-- Compiling architecture TB of alu_ns_tb
+
+} {} {}}

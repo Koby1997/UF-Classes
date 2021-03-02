@@ -1,0 +1,122 @@
+/usr/rep/src/reptilian-kernel/arch/x86/entry/syscalls/	nano syscall_64.tbl
+424     common  pidfd_send_signal       __x64_sys_pidfd_send_signal
+434     common  pidfd_open              __x64_sys_pidfd_open
+435     common  get_proc_log_level      __x64_sys_get_proc_log_level
+436     common  set_proc_log_level      __x64_sys_set_proc_log_level
+437     common  proc_log_message        __x64_sys_proc_log_message
+
+_____________________________________________________________________________
+
+/usr/rep/src/reptilian-kernel/include/linux 	nano syscalls.h
+asmlinkage int sys_get_proc_log_level(void);
+asmlinkage int sys_set_proc_log_level(int new_level);
+asmlinkage int sys_proc_log_message(int level, char *message);
+
+/*
+ * Not a real system call, but a placeholder for syscalls which are
+
+________________________________________________________________________________ 
+
+
+/usr/rep/src/reptilian-kernel/include/linux 	nano sched.h
+        void                            *security;
+#endif
+
+// variable for process log level
+int proc_log_level;
+
+        //this is in struct task_struct {}
+ ________________________________________________________________________________
+
+
+/usr/rep/src/reptilian-kernel/kernel 	nano sys.c
+prolly here
+
+______________________________________________________________
+
+/usr/rep/src/reptilian-kernel/init 	nano init_task.c
+
+#endif
+        .proc_log_level         = 0,
+};
+EXPORT_SYMBOL(init_task);
+
+______________________________________________
+kernel Makefile
+
+core-y          += kernel/ certs/ mm/ fs/ ipc/ security/ crypto/ block/ process_log/
+
+
+
+
+
+https://www.youtube.com/watch?v=AP-tBd84vbM
+https://www.kernel.org/doc/html/v4.10/process/adding-syscalls.html
+https://brennan.io/2016/11/14/kernel-dev-ep3/#:~:text=In%20fact%2C%20a%20system%20call,do%20something%20on%20your%20behalf.&text=In%20fact%2C%20the%20modern%20way,to%20make%20a%20system%20call. helpfull tutorial
+https://dev.to/omergulen/how-to-add-system-call-syscall-that-prints-elapsed-time-of-a-process-with-given-pid-to-the-kernel-and-test-it-335c
+https://news.ycombinator.com/item?id=19225268
+https://medium.com/@ssreehari/implementing-a-system-call-in-linux-kernel-4-7-1-6f98250a8c38
+
+
+compiling:
+
+cc -c process_log.c
+ar cr libprocess_log.a process_log.o
+
+cc -o executeName fileWeRun.c -L ./process_log -lprocess_log
+cc -o getTest getlevel.c -L ./process_log -lprocess_log
+cc -o setTest setlevel.c -L ./process_log -lprocess_log
+cc -o logTest send_log.c -L ./process_log -lprocess_log
+
+
+make && sudo make install && sudo make modules_install
+
+
+
+
+Your report will explain how you implemented the new system call in the kernel, including what changes
+were made to which files and why for each. It will describe how testing was performed and any known
+bugs. The report should be created using man format saved as a .txt. The report should be no more than
+500 words (about two pages in man format), cover all relevant aspects of the project, and be organized
+and formatted professionally – this is not a memo!
+
+
+files changed in kernel:
+/usr/rep/src/reptilian-kernel/arch/x86/entry/syscalls/syscall_64.tbl
+/usr/rep/src/reptilian-kernel/include/linux/syscalls.h
+/usr/rep/src/reptilian-kernel/kernel/sys.c
+
+
+
+I started out by adding my syscalls to the "syscall_64.tbl", nothing much to that. Next, I followed one of the guides given to us and I added the asmlinkage to "syscalls.h". Lastly, I defined my syscalls at the end of "sys.c". 
+
+problems I ran into:
+I honeslty was stuck for the longest time because I thought the code that I put into "syscalls.h" and "sys.c" was supposed to go into "process_log.h" and "process_log.c". I didn't know how everything connected like that, but soon I figured it out.
+Also, I could not figure out how to print the message for the proc_log_message function. I learned that kernel code cannot follow a pointer into user-space, but couldn't find a way to solve this. I tried multiple things like passing the message differently, or using copy_from_user.
+
+
+some of the many sources used:
+
+
+
+
+tar -zcvf process_log.tar.gz process_log
+
+for diff:
+
+git add -u
+git add '*.c' '*.h' '*Makefile*' '*.tbl'
+git diff remotes/origin/os-latest > P1.diff
+
+git apply p0.diff
+
+
+
+
+
+nano /usr/rep/src/reptilian-kernel/arch/x86/entry/syscalls/syscall_64.tbl
+nano /usr/rep/src/reptilian-kernel/include/linux/syscalls.h
+nano /usr/rep/src/reptilian-kernel/kernel/sys.c
+
+nano /usr/rep/src/reptilian-kernel/P1.diff
+

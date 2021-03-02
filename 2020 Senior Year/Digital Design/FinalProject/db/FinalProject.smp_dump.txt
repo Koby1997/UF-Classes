@@ -1,0 +1,15 @@
+
+State Machine - |top_level|all_together:U_MIPS|controller:CONTROLLER|state
+Name state.HALT state.I_COMPLETE state.SW_COMPLETE state.LW_COMPLETE2 state.LW_COMPLETE state.BEQ_COMPLETE state.ADDR_COMPU state.R_COMPLETE state.DECODE state.FETCH3 state.FETCH2 state.FETCH1 
+state.FETCH1 0 0 0 0 0 0 0 0 0 0 0 0 
+state.FETCH2 0 0 0 0 0 0 0 0 0 0 1 1 
+state.FETCH3 0 0 0 0 0 0 0 0 0 1 0 1 
+state.DECODE 0 0 0 0 0 0 0 0 1 0 0 1 
+state.R_COMPLETE 0 0 0 0 0 0 0 1 0 0 0 1 
+state.ADDR_COMPU 0 0 0 0 0 0 1 0 0 0 0 1 
+state.BEQ_COMPLETE 0 0 0 0 0 1 0 0 0 0 0 1 
+state.LW_COMPLETE 0 0 0 0 1 0 0 0 0 0 0 1 
+state.LW_COMPLETE2 0 0 0 1 0 0 0 0 0 0 0 1 
+state.SW_COMPLETE 0 0 1 0 0 0 0 0 0 0 0 1 
+state.I_COMPLETE 0 1 0 0 0 0 0 0 0 0 0 1 
+state.HALT 1 0 0 0 0 0 0 0 0 0 0 1 

@@ -1,0 +1,432 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab3
+Eadder
+Z0 w1580914344
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3
+Z4 8C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/adder.vhd
+Z5 FC:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/adder.vhd
+l0
+L4
+V2>@K18`jPWMO=IQl81Vi@0
+!s100 >bc]ghmEKZZV416`k[;3R1
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1580917698
+!i10b 1
+Z8 !s108 1580917698.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/adder.vhd|
+Z10 !s107 C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/adder.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Acarry_lookahead_bad_synthesis
+R1
+R2
+Z13 DEx4 work 5 adder 0 22 2>@K18`jPWMO=IQl81Vi@0
+l187
+L186
+Viai5iE=5oSCAoN_maX`_c0
+!s100 Q`XM?_eWo74>8XPQBJ9C^3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Acarry_lookahead
+R1
+R2
+R13
+l111
+L109
+Vf7IhF]Ujo>G>ed<6jM6`j1
+!s100 06bo@l9DkQb9T]API`YJY3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ahierarchical
+R1
+R2
+R13
+l69
+L41
+VoTc8z?l;Q[z1ZE;GAEj:]3
+!s100 ^jJHH9UjQK?9>=laljjid3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aripple_carry
+R1
+R2
+R13
+l27
+L14
+VeF1eajQ;9m8iGcId?=jG40
+!s100 <K;@H33N6>Ngb1:@SKeMG3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eadder_tb
+Z14 w1580914974
+Z15 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R1
+R2
+R3
+Z16 8C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/adder_tb.vhd
+Z17 FC:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/adder_tb.vhd
+l0
+L5
+Vi:T1ACTX4jNGl14clbN^V1
+!s100 Vmck=mKlhilEkHZULFzAN0
+R6
+32
+R7
+!i10b 1
+R8
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/adder_tb.vhd|
+Z19 !s107 C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/adder_tb.vhd|
+!i113 1
+R11
+R12
+Atb
+R15
+R1
+R2
+Z20 DEx4 work 8 adder_tb 0 22 i:T1ACTX4jNGl14clbN^V1
+l36
+L9
+VT_Fzd?Tn09UOogCR8TmDK3
+!s100 41i3=hV`;GV4E=2PSz_z02
+R6
+32
+R7
+!i10b 1
+R8
+R18
+R19
+!i113 1
+R11
+R12
+Ecgen
+Z21 w1568861348
+R1
+R2
+R3
+Z22 8C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/cgen2.vhd
+Z23 FC:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/cgen2.vhd
+l0
+L4
+V><d0TdijXYmAQiAf8`kk12
+!s100 oJ?eM=o==iWGo?hR3581_1
+R6
+32
+R7
+!i10b 1
+R8
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/cgen2.vhd|
+Z25 !s107 C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/cgen2.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R1
+R2
+DEx4 work 4 cgen 0 22 ><d0TdijXYmAQiAf8`kk12
+l13
+L11
+VN^L75@bNzkOfnI?96n][b3
+!s100 CJUgMZOI[F0cbP3aFg@D13
+R6
+32
+R7
+!i10b 1
+R8
+R24
+R25
+!i113 1
+R11
+R12
+Ecla
+Z26 w1568874306
+R1
+R2
+R3
+Z27 8C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/cla2.vhd
+Z28 FC:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/cla2.vhd
+l0
+L4
+Vo=KR?iQid=JTk5IjGJ7<f2
+!s100 db=RYIJF>;Fc4^d5K`KCW1
+R6
+32
+R7
+!i10b 1
+R8
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/cla2.vhd|
+Z30 !s107 C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/cla2.vhd|
+!i113 1
+R11
+R12
+Astr
+R1
+R2
+Z31 DEx4 work 3 cla 0 22 o=KR?iQid=JTk5IjGJ7<f2
+l17
+L15
+Z32 V`P3mZSmeMl[Ao5Ah<HFTR3
+Z33 !s100 >E]U@;>O<1ne=Z00LWJ:U3
+R6
+32
+R7
+!i10b 1
+R8
+R29
+R30
+!i113 1
+R11
+R12
+Ecla4
+Z34 w1568923172
+R1
+R2
+R3
+Z35 8C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/cla4.vhd
+Z36 FC:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/cla4.vhd
+l0
+L4
+Vf[jLEKJaT`V5@c8M0fP_93
+!s100 VHl9P4bRHzliiFG5b[kQO2
+R6
+32
+Z37 !s110 1580917697
+!i10b 1
+Z38 !s108 1580917697.000000
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/cla4.vhd|
+Z40 !s107 C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/cla4.vhd|
+!i113 1
+R11
+R12
+Abhv
+R1
+R2
+DEx4 work 4 cla4 0 22 f[jLEKJaT`V5@c8M0fP_93
+l40
+L16
+V3P^lED<<]39ED=NdI^ITn2
+!s100 C<Q2e6HM;mj9JCL2CcYlD1
+R6
+32
+R37
+!i10b 1
+R38
+R39
+R40
+!i113 1
+R11
+R12
+Edecoder7seg
+Z41 w1570687648
+R1
+R2
+R3
+Z42 8C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/decoder7seg.vhd
+Z43 FC:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/decoder7seg.vhd
+l0
+L5
+VNl[^XhgnLJIB7HONYE5I81
+!s100 IG3SU8;im6lH33KV9`PYM2
+R6
+32
+Z44 !s110 1580871713
+!i10b 1
+Z45 !s108 1580871713.000000
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/decoder7seg.vhd|
+Z47 !s107 C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/decoder7seg.vhd|
+!i113 1
+R11
+R12
+Astructure
+R1
+R2
+Z48 DEx4 work 11 decoder7seg 0 22 Nl[^XhgnLJIB7HONYE5I81
+l13
+L12
+Vfgh7[]7I3cHb3;Z1N579Z0
+!s100 6_>FCBmRGI^RW<:NL8Qc20
+R6
+32
+R44
+!i10b 1
+R45
+R46
+R47
+!i113 1
+R11
+R12
+Efa
+Z49 w1568858241
+R1
+R2
+R3
+Z50 8C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/fa.vhd
+Z51 FC:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/fa.vhd
+l0
+L6
+VYkHBE6aCW`1=_z``PPgCl1
+!s100 g9Q9fAEa2^KI67bDNNN3V3
+R6
+32
+R7
+!i10b 1
+R8
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/fa.vhd|
+Z53 !s107 C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/fa.vhd|
+!i113 1
+R11
+R12
+Abhv
+R1
+R2
+DEx4 work 2 fa 0 22 YkHBE6aCW`1=_z``PPgCl1
+l18
+L17
+Vk?iBPOTCQVRbLY;[28LQ_3
+!s100 A4lg;F[AGQHW`T_1JI4jH2
+R6
+32
+R7
+!i10b 1
+R8
+R52
+R53
+!i113 1
+R11
+R12
+Ctb_config
+eadder_tb
+aTB
+R13
+DAx4 work 8 adder_tb 2 tb 22 T_Fzd?Tn09UOogCR8TmDK3
+R15
+R1
+R2
+R20
+R14
+R3
+R16
+R17
+l0
+L233
+Vd2b?aKPVIA_5cQgBETXYK3
+!s100 bNZY^WL12aXFllaWgTF4H0
+R6
+32
+R7
+!i10b 1
+R8
+R18
+R19
+!i113 1
+R11
+R12
+Etop_level
+Z54 w1568937161
+R1
+R2
+R3
+Z55 8C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/adder_top.vhd
+Z56 FC:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/adder_top.vhd
+l0
+L21
+Vo1Zf?3;N;ca7SUSb0Co=40
+!s100 k4bk1ai4Y0[SednL7^oKX2
+R6
+32
+R7
+!i10b 1
+R8
+Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/adder_top.vhd|
+Z58 !s107 C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/PastLab3/adder_top.vhd|
+!i113 1
+R11
+R12
+Astr
+R1
+R2
+Z59 DEx4 work 9 top_level 0 22 o1Zf?3;N;ca7SUSb0Co=40
+l66
+L41
+V50bAEYKU6ncOh0glAz=M_0
+!s100 h?;RS7cgXcaNI_gDo]]=42
+R6
+32
+R7
+!i10b 1
+R8
+R57
+R58
+!i113 1
+R11
+R12
+Ctop_level_cfg
+etop_level
+aSTR
+R48
+R13
+DAx4 work 9 top_level 3 str 22 50bAEYKU6ncOh0glAz=M_0
+R1
+R2
+R59
+R54
+R3
+R55
+R56
+l0
+L126
+V@JDL5;:GGJ^kGX4[@GA_Y0
+!s100 0?kE`]zLFSOdLCNK71ijK2
+R6
+32
+R7
+!i10b 1
+R8
+R57
+R58
+!i113 1
+R11
+R12

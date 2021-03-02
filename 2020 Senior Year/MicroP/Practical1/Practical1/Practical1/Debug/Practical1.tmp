@@ -1,0 +1,37 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATxmega128A1U"</DEVICE>
+ <WORKING_DIR>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Practical1\Practical1\Practical1\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.1.68\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Practical1\Practical1\Practical1\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.1.68\avrasm\inc\ATxmega128a1udef.inc</FILE>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.1.68\avrasm\inc\ATxmega128A1Udef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Practical1\Practical1\Practical1\Debug\Practical1.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Practical1.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Practical1.map</FILE>
+  <FILE>Practical1.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <MAIN><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Practical1\Practical1\Practical1\main.asm</FILE><LINE>23</LINE></MAIN>
+  <TC_ISR><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Practical1\Practical1\Practical1\main.asm</FILE><LINE>150</LINE></TC_ISR>
+  <IO_INIT><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Practical1\Practical1\Practical1\main.asm</FILE><LINE>64</LINE></IO_INIT>
+  <TC_INIT><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Practical1\Practical1\Practical1\main.asm</FILE><LINE>92</LINE></TC_INIT>
+  <INTR_INIT><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Practical1\Practical1\Practical1\main.asm</FILE><LINE>124</LINE></INTR_INIT>
+  <CHECK_S2><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Practical1\Practical1\Practical1\main.asm</FILE><LINE>43</LINE></CHECK_S2>
+  <DONE><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Practical1\Practical1\Practical1\main.asm</FILE><LINE>56</LINE></DONE>
+  <NOT_PRESSED><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Practical1\Practical1\Practical1\main.asm</FILE><LINE>172</LINE></NOT_PRESSED>
+  <PRESSED><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Practical1\Practical1\Practical1\main.asm</FILE><LINE>165</LINE></PRESSED>
+  <LOGIC_DONE><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Practical1\Practical1\Practical1\main.asm</FILE><LINE>179</LINE></LOGIC_DONE>
+ </LABELS>
+</ASSEMBLER_INFO>

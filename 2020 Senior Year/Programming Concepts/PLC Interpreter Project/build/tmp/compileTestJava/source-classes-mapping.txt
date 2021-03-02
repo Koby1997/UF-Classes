@@ -1,0 +1,16 @@
+plc.interpreter/ParserTests.java
+ plc.interpreter.ParserTests
+plc.interpreter/InterpreterTests.java
+ plc.interpreter.InterpreterTests
+plc.interpreter/LexerTests.java
+ plc.interpreter.LexerTests
+plc.interpreter/InterpreterBaselineTests.java
+ plc.interpreter.InterpreterBaselineTests
+plc.compiler/GeneratorTests.java
+ plc.compiler.GeneratorTests
+plc.compiler/ParserTests.java
+ plc.compiler.ParserTests
+plc.compiler/AnalyzerTests.java
+ plc.compiler.AnalyzerTests
+plc.compiler/LexerTests.java
+ plc.compiler.LexerTests

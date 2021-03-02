@@ -1,0 +1,49 @@
+Zoom: 
+
+recorded lectures will be under each weeks module
+
+Regex cheat sheet: https://www.rexegg.com/regex-quickstart.html
+
+\[(|(([0-9]+)(|(|([,]( )?([0-9]+)))+)))\]
+
+Mine right: \[(|(([0]|[1-9][0-9]*)(|(|([,]( )?([0]|[1-9][0-9]*)))+)))\]
+
+
+
+
+Lexer is synonomous with scanner
+REGEX generates tokens
+Lexer recognizes those tokens. extend a token as long as possible
+Reserved words: follows rules for identifiers, but not allowed to be identifiers:
+	ex: class, int, public, etc.
+^ keyword: reserved word that has special meaning in the program
+Scanner has list of reserved words. After an identifier has been recognized, check list.
+if reserved word, return appropriate token type, else, identifier
+
+
+processChars: precesses a sequence of characters
+getChar: gets the next input character and assigns it to nextChar
+addChar: puts nextChar into place where lexeme/token is being accumulated, lexeme
+lookup: determines whether lexeme is a reserved word.
+
+
+
+we need to build a list of tokens
+
+
+
+
+
+
+[0-9] = 0123456789
+
+[a-zA-Z*/:!?<>=] = abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ*/:!?<>=
+
+
+
+
+
+
+
+
+build AST

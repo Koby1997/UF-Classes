@@ -1,0 +1,11 @@
+Fitter Status : Successful - Wed Jan 22 15:33:23 2020
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : Lab_1
+Top-level Entity Name : adder
+Family : MAX II
+Device : EPM240F100C4
+Timing Models : Final
+Total logic elements : 8 / 240 ( 3 % )
+Total pins : 14 / 80 ( 18 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

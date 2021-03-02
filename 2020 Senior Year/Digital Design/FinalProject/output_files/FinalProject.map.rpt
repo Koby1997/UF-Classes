@@ -1,0 +1,1268 @@
+Analysis & Synthesis report for FinalProject
+Wed Apr 15 15:47:33 2020
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis DSP Block Usage Summary
+ 10. State Machine - |top_level|all_together:U_MIPS|controller:CONTROLLER|state
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for all_together:U_MIPS|datapath:DATAPATH|memory:MEM|RAM:RAM|altsyncram:altsyncram_component|altsyncram_r124:auto_generated
+ 15. Parameter Settings for User Entity Instance: all_together:U_MIPS|controller:CONTROLLER
+ 16. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH
+ 17. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|reg:PC
+ 18. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|mux2x1:MUX_ONE
+ 19. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|memory:MEM
+ 20. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|memory:MEM|reg:INPORT0
+ 21. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|memory:MEM|reg:INPORT1
+ 22. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|memory:MEM|reg:OUTPORT1
+ 23. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|memory:MEM|RAM:RAM|altsyncram:altsyncram_component
+ 24. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|memory:MEM|mux4x1:MUX
+ 25. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|memory:MEM|reg:SEL_REG
+ 26. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|reg:INSTRUCTION_REGISTER
+ 27. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|reg:MDR
+ 28. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|mux2x1:MUX_TWO
+ 29. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|mux2x1:MUX_THREE
+ 30. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|reg:REG_A
+ 31. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|reg:REG_B
+ 32. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|mux2x1:MUX_FOUR
+ 33. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|shift_left_two:SHIFT_ONE
+ 34. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|mux4x1:MUX_FIVE
+ 35. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|alu:ALU
+ 36. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|reg:ALU_OUT
+ 37. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|reg:LO
+ 38. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|reg:HI
+ 39. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|mux4x1:MUX_SIX
+ 40. Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|mux4x1:MUX_SEVEN
+ 41. Parameter Settings for Inferred Entity Instance: all_together:U_MIPS|datapath:DATAPATH|alu:ALU|lpm_mult:Mult1
+ 42. Parameter Settings for Inferred Entity Instance: all_together:U_MIPS|datapath:DATAPATH|alu:ALU|lpm_mult:Mult0
+ 43. altsyncram Parameter Settings by Entity Instance
+ 44. lpm_mult Parameter Settings by Entity Instance
+ 45. Port Connectivity Checks: "all_together:U_MIPS|datapath:DATAPATH|reg:ALU_OUT"
+ 46. Port Connectivity Checks: "all_together:U_MIPS|datapath:DATAPATH|mux4x1:MUX_FIVE"
+ 47. Port Connectivity Checks: "all_together:U_MIPS|datapath:DATAPATH|reg:REG_B"
+ 48. Port Connectivity Checks: "all_together:U_MIPS|datapath:DATAPATH|reg:REG_A"
+ 49. Port Connectivity Checks: "all_together:U_MIPS|datapath:DATAPATH|reg:MDR"
+ 50. Port Connectivity Checks: "all_together:U_MIPS|datapath:DATAPATH|memory:MEM|reg:SEL_REG"
+ 51. Port Connectivity Checks: "all_together:U_MIPS|datapath:DATAPATH|memory:MEM|reg:INPORT1"
+ 52. Port Connectivity Checks: "all_together:U_MIPS|datapath:DATAPATH|memory:MEM|reg:INPORT0"
+ 53. Port Connectivity Checks: "all_together:U_MIPS"
+ 54. Post-Synthesis Netlist Statistics for Top Partition
+ 55. Elapsed Time Per Partition
+ 56. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Apr 15 15:47:33 2020       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; FinalProject                                ;
+; Top-level Entity Name              ; top_level                                   ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 3,942                                       ;
+;     Total combinational functions  ; 2,875                                       ;
+;     Dedicated logic registers      ; 1,299                                       ;
+; Total registers                    ; 1299                                        ;
+; Total pins                         ; 61                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 8,192                                       ;
+; Embedded Multiplier 9-bit elements ; 16                                          ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; top_level          ; FinalProject       ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                              ; Library ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------+---------+
+; weird_shift.vhd                  ; yes             ; User VHDL File                         ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/weird_shift.vhd        ;         ;
+; top_level.vhd                    ; yes             ; User VHDL File                         ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/top_level.vhd          ;         ;
+; sign_extend.vhd                  ; yes             ; User VHDL File                         ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/sign_extend.vhd        ;         ;
+; shift_left_two.vhd               ; yes             ; User VHDL File                         ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/shift_left_two.vhd     ;         ;
+; register_file.vhd                ; yes             ; User VHDL File                         ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/register_file.vhd      ;         ;
+; reg.vhd                          ; yes             ; User VHDL File                         ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/reg.vhd                ;         ;
+; RAM.vhd                          ; yes             ; User Wizard-Generated File             ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/RAM.vhd                ;         ;
+; mux4x1.vhd                       ; yes             ; User VHDL File                         ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/mux4x1.vhd             ;         ;
+; mux2x1.vhd                       ; yes             ; User VHDL File                         ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/mux2x1.vhd             ;         ;
+; memory_logic.vhd                 ; yes             ; User VHDL File                         ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/memory_logic.vhd       ;         ;
+; memory.vhd                       ; yes             ; User VHDL File                         ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/memory.vhd             ;         ;
+; extra_logic.vhd                  ; yes             ; User VHDL File                         ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/extra_logic.vhd        ;         ;
+; decoder7seg.vhd                  ; yes             ; User VHDL File                         ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/decoder7seg.vhd        ;         ;
+; datapath.vhd                     ; yes             ; User VHDL File                         ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/datapath.vhd           ;         ;
+; controller.vhd                   ; yes             ; User VHDL File                         ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/controller.vhd         ;         ;
+; constants.vhd                    ; yes             ; User VHDL File                         ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/constants.vhd          ;         ;
+; concat.vhd                       ; yes             ; User VHDL File                         ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/concat.vhd             ;         ;
+; alu_controller.vhd               ; yes             ; User VHDL File                         ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/alu_controller.vhd     ;         ;
+; alu.vhd                          ; yes             ; User VHDL File                         ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/alu.vhd                ;         ;
+; all_together.vhd                 ; yes             ; User VHDL File                         ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/all_together.vhd       ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                     ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc              ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                        ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                     ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                     ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                      ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                         ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                         ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                       ;         ;
+; db/altsyncram_r124.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/db/altsyncram_r124.tdf ;         ;
+; testcases/gcd.mif                ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/testcases/gcd.mif      ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf                       ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc                    ;         ;
+; multcore.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.inc                       ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc                       ;         ;
+; altshift.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc                       ;         ;
+; db/mult_tns.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/db/mult_tns.tdf        ;         ;
+; db/mult_qgs.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/db/mult_qgs.tdf        ;         ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 3,942          ;
+;                                             ;                ;
+; Total combinational functions               ; 2875           ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 2215           ;
+;     -- 3 input functions                    ; 582            ;
+;     -- <=2 input functions                  ; 78             ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 2582           ;
+;     -- arithmetic mode                      ; 293            ;
+;                                             ;                ;
+; Total registers                             ; 1299           ;
+;     -- Dedicated logic registers            ; 1299           ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 61             ;
+; Total memory bits                           ; 8192           ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 16             ;
+;                                             ;                ;
+; Maximum fan-out node                        ; clk50MHz~input ;
+; Maximum fan-out                             ; 1331           ;
+; Total fan-out                               ; 16625          ;
+; Average fan-out                             ; 3.83           ;
++---------------------------------------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                           ;
++----------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                ; Entity Name     ; Library Name ;
++----------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |top_level                                         ; 2875 (2)            ; 1299 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 61   ; 0            ; 0          ; |top_level                                                                                                                         ; top_level       ; work         ;
+;    |all_together:U_MIPS|                           ; 2831 (0)            ; 1299 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS                                                                                                     ; all_together    ; work         ;
+;       |controller:CONTROLLER|                      ; 46 (46)             ; 11 (11)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|controller:CONTROLLER                                                                               ; controller      ; work         ;
+;       |datapath:DATAPATH|                          ; 2785 (0)            ; 1288 (0)                  ; 8192        ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH                                                                                   ; datapath        ; work         ;
+;          |alu:ALU|                                 ; 1003 (832)          ; 0 (0)                     ; 0           ; 0          ; 16           ; 0       ; 8         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|alu:ALU                                                                           ; alu             ; work         ;
+;             |lpm_mult:Mult0|                       ; 92 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|alu:ALU|lpm_mult:Mult0                                                            ; lpm_mult        ; work         ;
+;                |mult_qgs:auto_generated|           ; 92 (92)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|alu:ALU|lpm_mult:Mult0|mult_qgs:auto_generated                                    ; mult_qgs        ; work         ;
+;             |lpm_mult:Mult1|                       ; 79 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|alu:ALU|lpm_mult:Mult1                                                            ; lpm_mult        ; work         ;
+;                |mult_tns:auto_generated|           ; 79 (79)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|alu:ALU|lpm_mult:Mult1|mult_tns:auto_generated                                    ; mult_tns        ; work         ;
+;          |alu_controller:ALU_CONTROLLER|           ; 57 (57)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|alu_controller:ALU_CONTROLLER                                                     ; alu_controller  ; work         ;
+;          |extra_logic:EXTRA_LOGIC|                 ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|extra_logic:EXTRA_LOGIC                                                           ; extra_logic     ; work         ;
+;          |memory:MEM|                              ; 82 (0)              ; 40 (0)                    ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|memory:MEM                                                                        ; memory          ; work         ;
+;             |RAM:RAM|                              ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|memory:MEM|RAM:RAM                                                                ; RAM             ; work         ;
+;                |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|memory:MEM|RAM:RAM|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
+;                   |altsyncram_r124:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|memory:MEM|RAM:RAM|altsyncram:altsyncram_component|altsyncram_r124:auto_generated ; altsyncram_r124 ; work         ;
+;             |memory_logic:MEM_LOGIC|               ; 42 (42)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|memory:MEM|memory_logic:MEM_LOGIC                                                 ; memory_logic    ; work         ;
+;             |mux4x1:MUX|                           ; 40 (40)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|memory:MEM|mux4x1:MUX                                                             ; mux4x1          ; work         ;
+;             |reg:INPORT0|                          ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|memory:MEM|reg:INPORT0                                                            ; reg             ; work         ;
+;             |reg:INPORT1|                          ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|memory:MEM|reg:INPORT1                                                            ; reg             ; work         ;
+;             |reg:OUTPORT1|                         ; 0 (0)               ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|memory:MEM|reg:OUTPORT1                                                           ; reg             ; work         ;
+;          |mux2x1:MUX_FOUR|                         ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|mux2x1:MUX_FOUR                                                                   ; mux2x1          ; work         ;
+;          |mux2x1:MUX_ONE|                          ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|mux2x1:MUX_ONE                                                                    ; mux2x1          ; work         ;
+;          |mux2x1:MUX_THREE|                        ; 74 (74)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|mux2x1:MUX_THREE                                                                  ; mux2x1          ; work         ;
+;          |mux2x1:MUX_TWO|                          ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|mux2x1:MUX_TWO                                                                    ; mux2x1          ; work         ;
+;          |mux4x1:MUX_FIVE|                         ; 52 (52)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|mux4x1:MUX_FIVE                                                                   ; mux4x1          ; work         ;
+;          |mux4x1:MUX_SIX|                          ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|mux4x1:MUX_SIX                                                                    ; mux4x1          ; work         ;
+;          |reg:ALU_OUT|                             ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|reg:ALU_OUT                                                                       ; reg             ; work         ;
+;          |reg:HI|                                  ; 32 (32)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|reg:HI                                                                            ; reg             ; work         ;
+;          |reg:INSTRUCTION_REGISTER|                ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|reg:INSTRUCTION_REGISTER                                                          ; reg             ; work         ;
+;          |reg:LO|                                  ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|reg:LO                                                                            ; reg             ; work         ;
+;          |reg:MDR|                                 ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|reg:MDR                                                                           ; reg             ; work         ;
+;          |reg:PC|                                  ; 35 (35)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|reg:PC                                                                            ; reg             ; work         ;
+;          |reg:REG_A|                               ; 5 (5)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|reg:REG_A                                                                         ; reg             ; work         ;
+;          |reg:REG_B|                               ; 5 (5)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|reg:REG_B                                                                         ; reg             ; work         ;
+;          |register_file:REGISTERS_FILE|            ; 1379 (1379)         ; 992 (992)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE                                                      ; register_file   ; work         ;
+;    |decoder7seg:U_LED0|                            ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:U_LED0                                                                                                      ; decoder7seg     ; work         ;
+;    |decoder7seg:U_LED1|                            ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:U_LED1                                                                                                      ; decoder7seg     ; work         ;
+;    |decoder7seg:U_LED2|                            ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:U_LED2                                                                                                      ; decoder7seg     ; work         ;
+;    |decoder7seg:U_LED3|                            ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:U_LED3                                                                                                      ; decoder7seg     ; work         ;
+;    |decoder7seg:U_LED4|                            ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:U_LED4                                                                                                      ; decoder7seg     ; work         ;
+;    |decoder7seg:U_LED5|                            ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|decoder7seg:U_LED5                                                                                                      ; decoder7seg     ; work         ;
++----------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                                                  ;
++------------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+--------------------------------------------------------------------------------------+
+; Name                                                                                                                               ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                                                                  ;
++------------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+--------------------------------------------------------------------------------------+
+; all_together:U_MIPS|datapath:DATAPATH|memory:MEM|RAM:RAM|altsyncram:altsyncram_component|altsyncram_r124:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 32           ; --           ; --           ; 8192 ; C:\Users\Koby\Desktop\School\Spring2020\DigitalDesign\FinalProject\testCases\GCD.mif ;
++------------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 0           ;
+; Simple Multipliers (18-bit)           ; 8           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 16          ;
+; Signed Embedded Multipliers           ; 1           ;
+; Unsigned Embedded Multipliers         ; 5           ;
+; Mixed Sign Embedded Multipliers       ; 2           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_level|all_together:U_MIPS|controller:CONTROLLER|state                                                                                                                                                             ;
++--------------------+------------+------------------+-------------------+--------------------+-------------------+--------------------+------------------+------------------+--------------+--------------+--------------+--------------+
+; Name               ; state.HALT ; state.I_COMPLETE ; state.SW_COMPLETE ; state.LW_COMPLETE2 ; state.LW_COMPLETE ; state.BEQ_COMPLETE ; state.ADDR_COMPU ; state.R_COMPLETE ; state.DECODE ; state.FETCH3 ; state.FETCH2 ; state.FETCH1 ;
++--------------------+------------+------------------+-------------------+--------------------+-------------------+--------------------+------------------+------------------+--------------+--------------+--------------+--------------+
+; state.FETCH1       ; 0          ; 0                ; 0                 ; 0                  ; 0                 ; 0                  ; 0                ; 0                ; 0            ; 0            ; 0            ; 0            ;
+; state.FETCH2       ; 0          ; 0                ; 0                 ; 0                  ; 0                 ; 0                  ; 0                ; 0                ; 0            ; 0            ; 1            ; 1            ;
+; state.FETCH3       ; 0          ; 0                ; 0                 ; 0                  ; 0                 ; 0                  ; 0                ; 0                ; 0            ; 1            ; 0            ; 1            ;
+; state.DECODE       ; 0          ; 0                ; 0                 ; 0                  ; 0                 ; 0                  ; 0                ; 0                ; 1            ; 0            ; 0            ; 1            ;
+; state.R_COMPLETE   ; 0          ; 0                ; 0                 ; 0                  ; 0                 ; 0                  ; 0                ; 1                ; 0            ; 0            ; 0            ; 1            ;
+; state.ADDR_COMPU   ; 0          ; 0                ; 0                 ; 0                  ; 0                 ; 0                  ; 1                ; 0                ; 0            ; 0            ; 0            ; 1            ;
+; state.BEQ_COMPLETE ; 0          ; 0                ; 0                 ; 0                  ; 0                 ; 1                  ; 0                ; 0                ; 0            ; 0            ; 0            ; 1            ;
+; state.LW_COMPLETE  ; 0          ; 0                ; 0                 ; 0                  ; 1                 ; 0                  ; 0                ; 0                ; 0            ; 0            ; 0            ; 1            ;
+; state.LW_COMPLETE2 ; 0          ; 0                ; 0                 ; 1                  ; 0                 ; 0                  ; 0                ; 0                ; 0            ; 0            ; 0            ; 1            ;
+; state.SW_COMPLETE  ; 0          ; 0                ; 1                 ; 0                  ; 0                 ; 0                  ; 0                ; 0                ; 0            ; 0            ; 0            ; 1            ;
+; state.I_COMPLETE   ; 0          ; 1                ; 0                 ; 0                  ; 0                 ; 0                  ; 0                ; 0                ; 0            ; 0            ; 0            ; 1            ;
+; state.HALT         ; 1          ; 0                ; 0                 ; 0                  ; 0                 ; 0                  ; 0                ; 0                ; 0            ; 0            ; 0            ; 1            ;
++--------------------+------------+------------------+-------------------+--------------------+-------------------+--------------------+------------------+------------------+--------------+--------------+--------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                      ;
++--------------------------------------------------------------------------------+----------------------------------------+
+; Register name                                                                  ; Reason for Removal                     ;
++--------------------------------------------------------------------------------+----------------------------------------+
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][31] ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][30] ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][29] ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][28] ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][27] ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][26] ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][25] ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][24] ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][23] ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][22] ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][21] ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][20] ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][19] ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][18] ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][17] ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][16] ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][15] ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][14] ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][13] ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][12] ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][11] ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][10] ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][9]  ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][8]  ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][7]  ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][6]  ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][5]  ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][4]  ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][3]  ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][2]  ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][1]  ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE|regs[0][0]  ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|memory:MEM|reg:INPORT1|output[8..31]     ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|datapath:DATAPATH|memory:MEM|reg:INPORT0|output[8..31]     ; Stuck at GND due to stuck port data_in ;
+; all_together:U_MIPS|controller:CONTROLLER|state.HALT                           ; Lost fanout                            ;
+; Total Number of Removed Registers = 81                                         ;                                        ;
++--------------------------------------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1299  ;
+; Number of registers using Synchronous Clear  ; 31    ;
+; Number of registers using Synchronous Load   ; 57    ;
+; Number of registers using Asynchronous Clear ; 1283  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1160  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_level|all_together:U_MIPS|datapath:DATAPATH|reg:PC|output[0]                          ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_level|all_together:U_MIPS|datapath:DATAPATH|reg:PC|output[30]                         ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |top_level|all_together:U_MIPS|datapath:DATAPATH|reg:PC|output[18]                         ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_level|all_together:U_MIPS|datapath:DATAPATH|reg:REG_B|output[24]                      ;
+; 7:1                ; 31 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |top_level|all_together:U_MIPS|datapath:DATAPATH|reg:HI|output[22]                         ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |top_level|all_together:U_MIPS|datapath:DATAPATH|reg:REG_A|output[9]                       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_level|all_together:U_MIPS|controller:CONTROLLER|next_state.ADDR_COMPU                 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_level|all_together:U_MIPS|datapath:DATAPATH|memory:MEM|memory_logic:MEM_LOGIC|sel[1]  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |top_level|all_together:U_MIPS|datapath:DATAPATH|memory:MEM|mux4x1:MUX|Mux31               ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |top_level|all_together:U_MIPS|datapath:DATAPATH|alu_controller:ALU_CONTROLLER|OPSelect[3] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_level|all_together:U_MIPS|datapath:DATAPATH|alu_controller:ALU_CONTROLLER|OPSelect[3] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_level|all_together:U_MIPS|datapath:DATAPATH|mux4x1:MUX_FIVE|Mux14                     ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_level|all_together:U_MIPS|datapath:DATAPATH|mux4x1:MUX_FIVE|Mux31                     ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |top_level|all_together:U_MIPS|datapath:DATAPATH|mux4x1:MUX_FIVE|Mux25                     ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |top_level|all_together:U_MIPS|datapath:DATAPATH|mux2x1:MUX_THREE|output[28]               ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top_level|all_together:U_MIPS|controller:CONTROLLER|ALUSrcB                               ;
+; 36:1               ; 7 bits    ; 168 LEs       ; 63 LEs               ; 105 LEs                ; No         ; |top_level|all_together:U_MIPS|datapath:DATAPATH|alu:ALU|Mux11                             ;
+; 35:1               ; 8 bits    ; 184 LEs       ; 72 LEs               ; 112 LEs                ; No         ; |top_level|all_together:U_MIPS|datapath:DATAPATH|alu:ALU|Mux22                             ;
+; 37:1               ; 4 bits    ; 96 LEs        ; 40 LEs               ; 56 LEs                 ; No         ; |top_level|all_together:U_MIPS|datapath:DATAPATH|alu:ALU|Mux4                              ;
+; 36:1               ; 4 bits    ; 96 LEs        ; 36 LEs               ; 60 LEs                 ; No         ; |top_level|all_together:U_MIPS|datapath:DATAPATH|alu:ALU|Mux27                             ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |top_level|all_together:U_MIPS|controller:CONTROLLER|Selector5                             ;
+; 38:1               ; 2 bits    ; 50 LEs        ; 22 LEs               ; 28 LEs                 ; No         ; |top_level|all_together:U_MIPS|datapath:DATAPATH|alu:ALU|Mux2                              ;
+; 37:1               ; 2 bits    ; 48 LEs        ; 20 LEs               ; 28 LEs                 ; No         ; |top_level|all_together:U_MIPS|datapath:DATAPATH|alu:ALU|Mux29                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for all_together:U_MIPS|datapath:DATAPATH|memory:MEM|RAM:RAM|altsyncram:altsyncram_component|altsyncram_r124:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                               ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|controller:CONTROLLER ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|reg:PC ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|mux2x1:MUX_ONE ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|memory:MEM ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|memory:MEM|reg:INPORT0 ;
++----------------+-------+----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                             ;
++----------------+-------+----------------------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|memory:MEM|reg:INPORT1 ;
++----------------+-------+----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                             ;
++----------------+-------+----------------------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|memory:MEM|reg:OUTPORT1 ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|memory:MEM|RAM:RAM|altsyncram:altsyncram_component      ;
++------------------------------------+--------------------------------------------------------------------------------------+----------------+
+; Parameter Name                     ; Value                                                                                ; Type           ;
++------------------------------------+--------------------------------------------------------------------------------------+----------------+
+; BYTE_SIZE_BLOCK                    ; 8                                                                                    ; Untyped        ;
+; AUTO_CARRY_CHAINS                  ; ON                                                                                   ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                                                                  ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS                ; ON                                                                                   ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                                                                  ; IGNORE_CASCADE ;
+; WIDTH_BYTEENA                      ; 1                                                                                    ; Untyped        ;
+; OPERATION_MODE                     ; SINGLE_PORT                                                                          ; Untyped        ;
+; WIDTH_A                            ; 32                                                                                   ; Signed Integer ;
+; WIDTHAD_A                          ; 8                                                                                    ; Signed Integer ;
+; NUMWORDS_A                         ; 256                                                                                  ; Signed Integer ;
+; OUTDATA_REG_A                      ; CLOCK0                                                                               ; Untyped        ;
+; ADDRESS_ACLR_A                     ; NONE                                                                                 ; Untyped        ;
+; OUTDATA_ACLR_A                     ; NONE                                                                                 ; Untyped        ;
+; WRCONTROL_ACLR_A                   ; NONE                                                                                 ; Untyped        ;
+; INDATA_ACLR_A                      ; NONE                                                                                 ; Untyped        ;
+; BYTEENA_ACLR_A                     ; NONE                                                                                 ; Untyped        ;
+; WIDTH_B                            ; 1                                                                                    ; Signed Integer ;
+; WIDTHAD_B                          ; 1                                                                                    ; Signed Integer ;
+; NUMWORDS_B                         ; 0                                                                                    ; Signed Integer ;
+; INDATA_REG_B                       ; CLOCK1                                                                               ; Untyped        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                                                               ; Untyped        ;
+; RDCONTROL_REG_B                    ; CLOCK1                                                                               ; Untyped        ;
+; ADDRESS_REG_B                      ; CLOCK1                                                                               ; Untyped        ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                                                         ; Untyped        ;
+; BYTEENA_REG_B                      ; CLOCK1                                                                               ; Untyped        ;
+; INDATA_ACLR_B                      ; NONE                                                                                 ; Untyped        ;
+; WRCONTROL_ACLR_B                   ; NONE                                                                                 ; Untyped        ;
+; ADDRESS_ACLR_B                     ; NONE                                                                                 ; Untyped        ;
+; OUTDATA_ACLR_B                     ; NONE                                                                                 ; Untyped        ;
+; RDCONTROL_ACLR_B                   ; NONE                                                                                 ; Untyped        ;
+; BYTEENA_ACLR_B                     ; NONE                                                                                 ; Untyped        ;
+; WIDTH_BYTEENA_A                    ; 1                                                                                    ; Signed Integer ;
+; WIDTH_BYTEENA_B                    ; 1                                                                                    ; Signed Integer ;
+; RAM_BLOCK_TYPE                     ; AUTO                                                                                 ; Untyped        ;
+; BYTE_SIZE                          ; 8                                                                                    ; Signed Integer ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                            ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                                                                 ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                                                                 ; Untyped        ;
+; INIT_FILE                          ; C:\Users\Koby\Desktop\School\Spring2020\DigitalDesign\FinalProject\testCases\GCD.mif ; Untyped        ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                                                               ; Untyped        ;
+; MAXIMUM_DEPTH                      ; 0                                                                                    ; Signed Integer ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                                                                               ; Untyped        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                                                               ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                                                                               ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                                                               ; Untyped        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                                                      ; Untyped        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                                                      ; Untyped        ;
+; ENABLE_ECC                         ; FALSE                                                                                ; Untyped        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                                                                ; Untyped        ;
+; WIDTH_ECCSTATUS                    ; 3                                                                                    ; Signed Integer ;
+; DEVICE_FAMILY                      ; MAX 10                                                                               ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_r124                                                                      ; Untyped        ;
++------------------------------------+--------------------------------------------------------------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|memory:MEM|mux4x1:MUX ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|memory:MEM|reg:SEL_REG ;
++----------------+-------+----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                             ;
++----------------+-------+----------------------------------------------------------------------------------+
+; width          ; 2     ; Signed Integer                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|reg:INSTRUCTION_REGISTER ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|reg:MDR ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|mux2x1:MUX_TWO ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; width          ; 5     ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|mux2x1:MUX_THREE ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|reg:REG_A ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|reg:REG_B ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|mux2x1:MUX_FOUR ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|shift_left_two:SHIFT_ONE ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|mux4x1:MUX_FIVE ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|alu:ALU ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|reg:ALU_OUT ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|reg:LO ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|reg:HI ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|mux4x1:MUX_SIX ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: all_together:U_MIPS|datapath:DATAPATH|mux4x1:MUX_SEVEN ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: all_together:U_MIPS|datapath:DATAPATH|alu:ALU|lpm_mult:Mult1 ;
++------------------------------------------------+----------+---------------------------------------------------+
+; Parameter Name                                 ; Value    ; Type                                              ;
++------------------------------------------------+----------+---------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE                                    ;
+; LPM_WIDTHA                                     ; 32       ; Untyped                                           ;
+; LPM_WIDTHB                                     ; 32       ; Untyped                                           ;
+; LPM_WIDTHP                                     ; 64       ; Untyped                                           ;
+; LPM_WIDTHR                                     ; 64       ; Untyped                                           ;
+; LPM_WIDTHS                                     ; 1        ; Untyped                                           ;
+; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped                                           ;
+; LPM_PIPELINE                                   ; 0        ; Untyped                                           ;
+; LATENCY                                        ; 0        ; Untyped                                           ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped                                           ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped                                           ;
+; USE_EAB                                        ; OFF      ; Untyped                                           ;
+; MAXIMIZE_SPEED                                 ; 5        ; Untyped                                           ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped                                           ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped                                           ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K                               ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped                                           ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped                                           ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped                                           ;
+; CBXI_PARAMETER                                 ; mult_tns ; Untyped                                           ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped                                           ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped                                           ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped                                           ;
++------------------------------------------------+----------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: all_together:U_MIPS|datapath:DATAPATH|alu:ALU|lpm_mult:Mult0 ;
++------------------------------------------------+----------+---------------------------------------------------+
+; Parameter Name                                 ; Value    ; Type                                              ;
++------------------------------------------------+----------+---------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE                                    ;
+; LPM_WIDTHA                                     ; 32       ; Untyped                                           ;
+; LPM_WIDTHB                                     ; 32       ; Untyped                                           ;
+; LPM_WIDTHP                                     ; 64       ; Untyped                                           ;
+; LPM_WIDTHR                                     ; 64       ; Untyped                                           ;
+; LPM_WIDTHS                                     ; 1        ; Untyped                                           ;
+; LPM_REPRESENTATION                             ; SIGNED   ; Untyped                                           ;
+; LPM_PIPELINE                                   ; 0        ; Untyped                                           ;
+; LATENCY                                        ; 0        ; Untyped                                           ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped                                           ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped                                           ;
+; USE_EAB                                        ; OFF      ; Untyped                                           ;
+; MAXIMIZE_SPEED                                 ; 5        ; Untyped                                           ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped                                           ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped                                           ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K                               ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped                                           ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped                                           ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped                                           ;
+; CBXI_PARAMETER                                 ; mult_qgs ; Untyped                                           ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped                                           ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped                                           ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped                                           ;
++------------------------------------------------+----------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                                     ;
++-------------------------------------------+------------------------------------------------------------------------------------------+
+; Name                                      ; Value                                                                                    ;
++-------------------------------------------+------------------------------------------------------------------------------------------+
+; Number of entity instances                ; 1                                                                                        ;
+; Entity Instance                           ; all_together:U_MIPS|datapath:DATAPATH|memory:MEM|RAM:RAM|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                                              ;
+;     -- WIDTH_A                            ; 32                                                                                       ;
+;     -- NUMWORDS_A                         ; 256                                                                                      ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                                                   ;
+;     -- WIDTH_B                            ; 1                                                                                        ;
+;     -- NUMWORDS_B                         ; 0                                                                                        ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                   ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                             ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                     ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                ;
++-------------------------------------------+------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                                       ;
++---------------------------------------+--------------------------------------------------------------+
+; Name                                  ; Value                                                        ;
++---------------------------------------+--------------------------------------------------------------+
+; Number of entity instances            ; 2                                                            ;
+; Entity Instance                       ; all_together:U_MIPS|datapath:DATAPATH|alu:ALU|lpm_mult:Mult1 ;
+;     -- LPM_WIDTHA                     ; 32                                                           ;
+;     -- LPM_WIDTHB                     ; 32                                                           ;
+;     -- LPM_WIDTHP                     ; 64                                                           ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                     ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                           ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                                           ;
+;     -- USE_EAB                        ; OFF                                                          ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                         ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                           ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                           ;
+; Entity Instance                       ; all_together:U_MIPS|datapath:DATAPATH|alu:ALU|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 32                                                           ;
+;     -- LPM_WIDTHB                     ; 32                                                           ;
+;     -- LPM_WIDTHP                     ; 64                                                           ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                                       ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                           ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                                           ;
+;     -- USE_EAB                        ; OFF                                                          ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                         ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                           ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                           ;
++---------------------------------------+--------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "all_together:U_MIPS|datapath:DATAPATH|reg:ALU_OUT" ;
++--------+-------+----------+---------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                           ;
++--------+-------+----------+---------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                      ;
++--------+-------+----------+---------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "all_together:U_MIPS|datapath:DATAPATH|mux4x1:MUX_FIVE" ;
++------------+-------+----------+---------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                           ;
++------------+-------+----------+---------------------------------------------------+
+; in1[31..3] ; Input ; Info     ; Stuck at GND                                      ;
+; in1[1..0]  ; Input ; Info     ; Stuck at GND                                      ;
+; in1[2]     ; Input ; Info     ; Stuck at VCC                                      ;
++------------+-------+----------+---------------------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Port Connectivity Checks: "all_together:U_MIPS|datapath:DATAPATH|reg:REG_B" ;
++--------+-------+----------+-------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                         ;
++--------+-------+----------+-------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                    ;
++--------+-------+----------+-------------------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Port Connectivity Checks: "all_together:U_MIPS|datapath:DATAPATH|reg:REG_A" ;
++--------+-------+----------+-------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                         ;
++--------+-------+----------+-------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                    ;
++--------+-------+----------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "all_together:U_MIPS|datapath:DATAPATH|reg:MDR" ;
++--------+-------+----------+-----------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                       ;
++--------+-------+----------+-----------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                  ;
++--------+-------+----------+-----------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "all_together:U_MIPS|datapath:DATAPATH|memory:MEM|reg:SEL_REG"                         ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "all_together:U_MIPS|datapath:DATAPATH|memory:MEM|reg:INPORT1" ;
++------+-------+----------+----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                        ;
++------+-------+----------+----------------------------------------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                                                   ;
++------+-------+----------+----------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "all_together:U_MIPS|datapath:DATAPATH|memory:MEM|reg:INPORT0" ;
++------+-------+----------+----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                        ;
++------+-------+----------+----------------------------------------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                                                   ;
++------+-------+----------+----------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "all_together:U_MIPS"                                                                           ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; switches[31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; outport[31..24] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 61                          ;
+; cycloneiii_ff         ; 1299                        ;
+;     CLR               ; 139                         ;
+;     ENA               ; 16                          ;
+;     ENA CLR           ; 1087                        ;
+;     ENA CLR SCLR SLD  ; 31                          ;
+;     ENA CLR SLD       ; 26                          ;
+; cycloneiii_lcell_comb ; 2882                        ;
+;     arith             ; 293                         ;
+;         2 data inputs ; 38                          ;
+;         3 data inputs ; 255                         ;
+;     normal            ; 2589                        ;
+;         0 data inputs ; 5                           ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 34                          ;
+;         3 data inputs ; 327                         ;
+;         4 data inputs ; 2215                        ;
+; cycloneiii_mac_mult   ; 8                           ;
+; cycloneiii_mac_out    ; 8                           ;
+; cycloneiii_ram_block  ; 32                          ;
+;                       ;                             ;
+; Max LUT depth         ; 19.00                       ;
+; Average LUT depth     ; 7.50                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:11     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Wed Apr 15 15:47:01 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProject -c FinalProject
+Warning (125092): Tcl Script File ROM2.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE ROM2.qip
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file weird_shift.vhd
+    Info (12022): Found design unit 1: weird_shift-BHV File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/weird_shift.vhd Line: 11
+    Info (12023): Found entity 1: weird_shift File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/weird_shift.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file top_level.vhd
+    Info (12022): Found design unit 1: top_level-str File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/top_level.vhd Line: 26
+    Info (12023): Found entity 1: top_level File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/top_level.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file sign_extend.vhd
+    Info (12022): Found design unit 1: sign_extend-BHV File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/sign_extend.vhd Line: 12
+    Info (12023): Found entity 1: sign_extend File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/sign_extend.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file shift_left_two.vhd
+    Info (12022): Found design unit 1: shift_left_two-BHV File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/shift_left_two.vhd Line: 13
+    Info (12023): Found entity 1: shift_left_two File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/shift_left_two.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file register_file.vhd
+    Info (12022): Found design unit 1: register_file-async_read File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/register_file.vhd Line: 22
+    Info (12023): Found entity 1: register_file File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/register_file.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file reg.vhd
+    Info (12022): Found design unit 1: reg-BHV File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/reg.vhd Line: 19
+    Info (12023): Found entity 1: reg File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/reg.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
+    Info (12022): Found design unit 1: ram-SYN File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/RAM.vhd Line: 54
+    Info (12023): Found entity 1: RAM File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/RAM.vhd Line: 42
+Info (12021): Found 2 design units, including 1 entities, in source file mux4x1.vhd
+    Info (12022): Found design unit 1: mux4x1-BHV File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/mux4x1.vhd Line: 16
+    Info (12023): Found entity 1: mux4x1 File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/mux4x1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux2x1.vhd
+    Info (12022): Found design unit 1: mux2x1-BHV File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/mux2x1.vhd Line: 17
+    Info (12023): Found entity 1: mux2x1 File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/mux2x1.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file memory_logic.vhd
+    Info (12022): Found design unit 1: memory_logic-BHV File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/memory_logic.vhd Line: 15
+    Info (12023): Found entity 1: memory_logic File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/memory_logic.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file memory.vhd
+    Info (12022): Found design unit 1: memory-str File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/memory.vhd Line: 22
+    Info (12023): Found entity 1: memory File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/memory.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ir.vhd
+    Info (12022): Found design unit 1: IR-BHV File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/IR.vhd Line: 20
+    Info (12023): Found entity 1: IR File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/IR.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file extra_logic.vhd
+    Info (12022): Found design unit 1: extra_logic-BHV File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/extra_logic.vhd Line: 13
+    Info (12023): Found entity 1: extra_logic File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/extra_logic.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file decoder7seg.vhd
+    Info (12022): Found design unit 1: decoder7seg-BHV File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/decoder7seg.vhd Line: 10
+    Info (12023): Found entity 1: decoder7seg File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/decoder7seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhd
+    Info (12022): Found design unit 1: datapath-STR File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/datapath.vhd Line: 35
+    Info (12023): Found entity 1: datapath File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/datapath.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file controller.vhd
+    Info (12022): Found design unit 1: controller-BHV File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/controller.vhd Line: 34
+    Info (12023): Found entity 1: controller File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/controller.vhd Line: 6
+Info (12021): Found 1 design units, including 0 entities, in source file constants.vhd
+    Info (12022): Found design unit 1: constants File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/constants.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file concat.vhd
+    Info (12022): Found design unit 1: concat-BHV File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/concat.vhd Line: 12
+    Info (12023): Found entity 1: concat File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/concat.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file alu_tb.vhd
+    Info (12022): Found design unit 1: alu_tb-TB File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/alu_tb.vhd Line: 9
+    Info (12023): Found entity 1: alu_tb File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/alu_tb.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file alu_controller.vhd
+    Info (12022): Found design unit 1: alu_controller-BHV File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/alu_controller.vhd Line: 19
+    Info (12023): Found entity 1: alu_controller File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/alu_controller.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: alu-BHV File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/alu.vhd Line: 21
+    Info (12023): Found entity 1: alu File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/alu.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file all_together.vhd
+    Info (12022): Found design unit 1: all_together-STR File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/all_together.vhd Line: 18
+    Info (12023): Found entity 1: all_together File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/all_together.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file ram2.vhd
+    Info (12022): Found design unit 1: ram2-SYN File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/RAM2.vhd Line: 54
+    Info (12023): Found entity 1: RAM2 File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/RAM2.vhd Line: 42
+Info (12127): Elaborating entity "top_level" for the top level hierarchy
+Info (12128): Elaborating entity "all_together" for hierarchy "all_together:U_MIPS" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/top_level.vhd Line: 61
+Warning (10541): VHDL Signal Declaration warning at all_together.vhd(35): used implicit default value for signal "ir5_0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/all_together.vhd Line: 35
+Info (12128): Elaborating entity "controller" for hierarchy "all_together:U_MIPS|controller:CONTROLLER" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/all_together.vhd Line: 40
+Warning (10492): VHDL Process Statement warning at controller.vhd(103): signal "ir5_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/controller.vhd Line: 103
+Warning (10492): VHDL Process Statement warning at controller.vhd(109): signal "ir5_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/controller.vhd Line: 109
+Info (12128): Elaborating entity "datapath" for hierarchy "all_together:U_MIPS|datapath:DATAPATH" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/all_together.vhd Line: 62
+Info (12128): Elaborating entity "extra_logic" for hierarchy "all_together:U_MIPS|datapath:DATAPATH|extra_logic:EXTRA_LOGIC" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/datapath.vhd Line: 81
+Info (12128): Elaborating entity "reg" for hierarchy "all_together:U_MIPS|datapath:DATAPATH|reg:PC" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/datapath.vhd Line: 89
+Info (12128): Elaborating entity "mux2x1" for hierarchy "all_together:U_MIPS|datapath:DATAPATH|mux2x1:MUX_ONE" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/datapath.vhd Line: 99
+Info (12128): Elaborating entity "memory" for hierarchy "all_together:U_MIPS|datapath:DATAPATH|memory:MEM" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/datapath.vhd Line: 109
+Warning (10036): Verilog HDL or VHDL warning at memory.vhd(28): object "SEL_REG_OUT" assigned a value but never read File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/memory.vhd Line: 28
+Info (12128): Elaborating entity "RAM" for hierarchy "all_together:U_MIPS|datapath:DATAPATH|memory:MEM|RAM:RAM" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/memory.vhd Line: 68
+Info (12128): Elaborating entity "altsyncram" for hierarchy "all_together:U_MIPS|datapath:DATAPATH|memory:MEM|RAM:RAM|altsyncram:altsyncram_component" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/RAM.vhd Line: 61
+Info (12130): Elaborated megafunction instantiation "all_together:U_MIPS|datapath:DATAPATH|memory:MEM|RAM:RAM|altsyncram:altsyncram_component" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/RAM.vhd Line: 61
+Info (12133): Instantiated megafunction "all_together:U_MIPS|datapath:DATAPATH|memory:MEM|RAM:RAM|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/RAM.vhd Line: 61
+    Info (12134): Parameter "address_aclr_a" = "UNUSED"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_aclr_a" = "UNUSED"
+    Info (12134): Parameter "byteena_aclr_b" = "NONE"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "intended_device_family" = "MAX 10"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "indata_aclr_a" = "UNUSED"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "init_file" = "C:\Users\Koby\Desktop\School\Spring2020\DigitalDesign\FinalProject\testCases\GCD.mif"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "stratixiv_m144k_allow_dual_clocks" = "ON"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "width_eccstatus" = "3"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "UNUSED"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_r124.tdf
+    Info (12023): Found entity 1: altsyncram_r124 File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/db/altsyncram_r124.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_r124" for hierarchy "all_together:U_MIPS|datapath:DATAPATH|memory:MEM|RAM:RAM|altsyncram:altsyncram_component|altsyncram_r124:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "mux4x1" for hierarchy "all_together:U_MIPS|datapath:DATAPATH|memory:MEM|mux4x1:MUX" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/memory.vhd Line: 77
+Info (12128): Elaborating entity "reg" for hierarchy "all_together:U_MIPS|datapath:DATAPATH|memory:MEM|reg:SEL_REG" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/memory.vhd Line: 88
+Info (12128): Elaborating entity "memory_logic" for hierarchy "all_together:U_MIPS|datapath:DATAPATH|memory:MEM|memory_logic:MEM_LOGIC" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/memory.vhd Line: 98
+Warning (10492): VHDL Process Statement warning at memory_logic.vhd(25): signal "addr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/memory_logic.vhd Line: 25
+Warning (10492): VHDL Process Statement warning at memory_logic.vhd(27): signal "addr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/memory_logic.vhd Line: 27
+Warning (10492): VHDL Process Statement warning at memory_logic.vhd(29): signal "addr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/memory_logic.vhd Line: 29
+Warning (10492): VHDL Process Statement warning at memory_logic.vhd(31): signal "MemWrite" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/memory_logic.vhd Line: 31
+Info (12128): Elaborating entity "mux2x1" for hierarchy "all_together:U_MIPS|datapath:DATAPATH|mux2x1:MUX_TWO" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/datapath.vhd Line: 156
+Info (12128): Elaborating entity "register_file" for hierarchy "all_together:U_MIPS|datapath:DATAPATH|register_file:REGISTERS_FILE" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/datapath.vhd Line: 175
+Info (12128): Elaborating entity "sign_extend" for hierarchy "all_together:U_MIPS|datapath:DATAPATH|sign_extend:SIGN_EXTEND" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/datapath.vhd Line: 219
+Warning (10492): VHDL Process Statement warning at sign_extend.vhd(16): signal "isSigned" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/sign_extend.vhd Line: 16
+Info (12128): Elaborating entity "shift_left_two" for hierarchy "all_together:U_MIPS|datapath:DATAPATH|shift_left_two:SHIFT_ONE" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/datapath.vhd Line: 225
+Info (12128): Elaborating entity "alu" for hierarchy "all_together:U_MIPS|datapath:DATAPATH|alu:ALU" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/datapath.vhd Line: 244
+Info (12128): Elaborating entity "weird_shift" for hierarchy "all_together:U_MIPS|datapath:DATAPATH|weird_shift:WEIRD_SHIFT" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/datapath.vhd Line: 288
+Info (12128): Elaborating entity "concat" for hierarchy "all_together:U_MIPS|datapath:DATAPATH|concat:CONCAT" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/datapath.vhd Line: 294
+Info (12128): Elaborating entity "alu_controller" for hierarchy "all_together:U_MIPS|datapath:DATAPATH|alu_controller:ALU_CONTROLLER" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/datapath.vhd Line: 326
+Warning (10492): VHDL Process Statement warning at alu_controller.vhd(118): signal "IR20_16" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/alu_controller.vhd Line: 118
+Info (12128): Elaborating entity "decoder7seg" for hierarchy "decoder7seg:U_LED5" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/top_level.vhd Line: 71
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "all_together:U_MIPS|datapath:DATAPATH|alu:ALU|Mult1" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/alu.vhd Line: 66
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "all_together:U_MIPS|datapath:DATAPATH|alu:ALU|Mult0" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/alu.vhd Line: 61
+Info (12130): Elaborated megafunction instantiation "all_together:U_MIPS|datapath:DATAPATH|alu:ALU|lpm_mult:Mult1" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/alu.vhd Line: 66
+Info (12133): Instantiated megafunction "all_together:U_MIPS|datapath:DATAPATH|alu:ALU|lpm_mult:Mult1" with the following parameter: File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/alu.vhd Line: 66
+    Info (12134): Parameter "LPM_WIDTHA" = "32"
+    Info (12134): Parameter "LPM_WIDTHB" = "32"
+    Info (12134): Parameter "LPM_WIDTHP" = "64"
+    Info (12134): Parameter "LPM_WIDTHR" = "64"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_tns.tdf
+    Info (12023): Found entity 1: mult_tns File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/db/mult_tns.tdf Line: 30
+Info (12130): Elaborated megafunction instantiation "all_together:U_MIPS|datapath:DATAPATH|alu:ALU|lpm_mult:Mult0" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/alu.vhd Line: 61
+Info (12133): Instantiated megafunction "all_together:U_MIPS|datapath:DATAPATH|alu:ALU|lpm_mult:Mult0" with the following parameter: File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/alu.vhd Line: 61
+    Info (12134): Parameter "LPM_WIDTHA" = "32"
+    Info (12134): Parameter "LPM_WIDTHB" = "32"
+    Info (12134): Parameter "LPM_WIDTHP" = "64"
+    Info (12134): Parameter "LPM_WIDTHR" = "64"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_qgs.tdf
+    Info (12023): Found entity 1: mult_qgs File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/db/mult_qgs.tdf Line: 30
+Info (13014): Ignored 470 buffer(s)
+    Info (13019): Ignored 470 SOFT buffer(s)
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "led0_dp" is stuck at VCC File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/top_level.vhd Line: 12
+    Warning (13410): Pin "led1_dp" is stuck at VCC File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/top_level.vhd Line: 14
+    Warning (13410): Pin "led2_dp" is stuck at VCC File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/top_level.vhd Line: 16
+    Warning (13410): Pin "led3_dp" is stuck at VCC File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/top_level.vhd Line: 18
+    Warning (13410): Pin "led4_dp" is stuck at VCC File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/top_level.vhd Line: 20
+    Warning (13410): Pin "led5_dp" is stuck at VCC File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/top_level.vhd Line: 22
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "button[1]" File: C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/FinalProject/top_level.vhd Line: 10
+Info (21057): Implemented 4149 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 48 output pins
+    Info (21061): Implemented 4040 logic cells
+    Info (21064): Implemented 32 RAM segments
+    Info (21062): Implemented 16 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 4822 megabytes
+    Info: Processing ended: Wed Apr 15 15:47:33 2020
+    Info: Elapsed time: 00:00:32
+    Info: Total CPU time (on all processors): 00:00:48
+
+

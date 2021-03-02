@@ -1,0 +1,35 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATxmega128A1U"</DEVICE>
+ <WORKING_DIR>C:\Users\Koby\Desktop\School\Summer2020\MicroP\tableExample\tableExample\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.1.68\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\tableExample\tableExample\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.1.68\avrasm\inc\ATxmega128a1udef.inc</FILE>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.1.68\avrasm\inc\ATxmega128A1Udef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\tableExample\tableExample\Debug\tableExample.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>tableExample.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>tableExample.map</FILE>
+  <FILE>tableExample.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <MAIN><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\tableExample\tableExample\main.asm</FILE><LINE>54</LINE></MAIN>
+  <Table><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\tableExample\tableExample\main.asm</FILE><LINE>30</LINE></Table>
+  <Hello><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\tableExample\tableExample\main.asm</FILE><LINE>31</LINE></Hello>
+  <GoodBye><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\tableExample\tableExample\main.asm</FILE><LINE>33</LINE></GoodBye>
+  <Total><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\tableExample\tableExample\main.asm</FILE><LINE>48</LINE></Total>
+  <Outs><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\tableExample\tableExample\main.asm</FILE><LINE>49</LINE></Outs>
+  <LOOP><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\tableExample\tableExample\main.asm</FILE><LINE>80</LINE></LOOP>
+  <DONE><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\tableExample\tableExample\main.asm</FILE><LINE>100</LINE></DONE>
+ </LABELS>
+</ASSEMBLER_INFO>

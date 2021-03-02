@@ -1,0 +1,462 @@
+INSERT INTO Traveler (name, ssn, dob)
+VALUES
+('Albert', 100, '1990-05-05'),
+('Barry', 101,  '1992-10-03'),
+('Cody', 102,   '1995-02-12'),
+('Dawg', 103,   '1999-12-29'),
+('Ellroy', 104, '1990-04-04'),
+('Frank', 105,  '1989-09-13'),
+('George', 106, '1986-2-22'),
+('Harry', 107,  '1999-06-30'),
+('Isiah', 108,  '1997-01-01'),
+('Jacob', 109,  '1992-12-05'),
+('Koby', 110,   '1997-11-11');
+
+
+
+
+
+
+
+CREATE TABLE Booking(
+agent varchar(50) NOT NULL,
+traveler_ssn int,
+trip_id int,
+PRIMARY KEY (agent, traveler_ssn, trip_id)
+);
+
+
+INSERT INTO Booking (agent, traveler_ssn, trip_id)
+VALUES
+('James Bond', 100, 1000),
+('James Bond', 100, 1001),
+('James Bond', 100, 1002),
+('James Bond', 101, 1003),
+('James Bond', 101, 1004),
+('James Bond', 101, 1005),
+('James Bond', 102, 1006),
+('James Bond', 102, 1007),
+('James Bond', 102, 1008),
+('James Bond', 103, 1009),
+('James Bond', 103, 1010),
+('Agent2', 100, 2000),
+('Agent2', 100, 2001),
+('Agent2', 100, 2002),
+('Agent2', 101, 2003),
+('Agent2', 101, 2004),
+('Agent2', 101, 2005),
+('Agent2', 102, 2006),
+('Agent2', 102, 2007),
+('Agent2', 102, 2008),
+('Agent2', 103, 2009),
+('Agent2', 104, 2010),
+('A3', 100, 3000),
+('A3', 101, 3001),
+('A3', 102, 3002),
+('A3', 103, 3003),
+('A3', 104, 3004),
+('A3', 105, 3005),
+('A3', 106, 3006),
+('A3', 107, 3007),
+('A3', 108, 3008),
+('A3', 109, 3009),
+('A3', 110, 3010);
+
+INSERT INTO Booking (agent, traveler_ssn, trip_id)
+VALUES
+('James Bond', 110, 9999);
+
+
+
+
+
+CREATE TABLE FormedBy(
+id int,
+location varchar(100),
+start_date Date,
+end_date Date,
+PRIMARY KEY (id, location, start_date, end_date)
+);
+
+
+INSERT INTO FormedBy (id, location, start_date, end_date)
+VALUES
+(1000, 'Florida',  '2020-01-01', '2020-01-10'),
+(1000, 'Georgia',  '2020-01-10', '2020-01-15'),
+(1000, 'NY',       '2020-01-15', '2020-01-20'),
+(1000, 'Main',     '2020-01-20', '2020-01-25'),
+(1001, 'Place 1',  '2020-01-01', '2020-01-05'),
+(1001, 'Place 2',  '2020-01-05', '2020-01-13'),
+(1001, 'Place 3',  '2020-01-13', '2020-01-19'),
+(1002, 'Place 2',  '2020-01-02', '2020-01-10'),
+(1003, 'Place 3',  '2020-01-03', '2020-01-10'),
+(1004, 'Place 4',  '2020-01-04', '2020-01-10'),
+(1005, 'Place 5',  '2020-01-05', '2020-01-10'),
+(1006, 'Place 6',  '2020-01-06', '2020-01-10'),
+(1007, 'Place 7',  '2020-01-07', '2020-01-10'),
+(1008, 'Place 8',  '2020-01-08', '2020-01-10'),
+(1009, 'Place 9',  '2020-01-09', '2020-01-10'),
+(1010, 'Place 10', '2020-01-10', '2020-02-10'),
+(2000, 'Place 11', '2020-01-11', '2020-02-11'),
+(2001, 'Place 12', '2020-01-12', '2020-02-12'),
+(2002, 'Place 13', '2020-01-13', '2020-02-13'),
+(2003, 'Place 14', '2020-01-14', '2020-02-14'),
+(2004, 'Place 15', '2020-01-15', '2020-02-15'),
+(2005, 'Place 16', '2020-01-16', '2020-02-16'),
+(2006, 'Place 17', '2020-01-17', '2020-02-17'),
+(2007, 'Place 18', '2020-01-18', '2020-02-18'),
+(2008, 'Place 19', '2020-01-19', '2020-02-19'),
+(2009, 'Place 20', '2020-01-20', '2020-02-20'),
+(2010, 'Place 21', '2020-01-21', '2020-02-21'),
+(3000, 'Place 22', '2020-01-22', '2020-02-22'),
+(3001, 'Place 23', '2020-01-23', '2020-02-23'),
+(3002, 'Place 24', '2020-01-24', '2020-02-24'),
+(3003, 'Place 25', '2020-01-25', '2020-02-25'),
+(3004, 'Place 26', '2020-01-26', '2020-02-26'),
+(3005, 'Place 27', '2020-01-27', '2020-02-27'),
+(3006, 'Place 28', '2020-01-28', '2020-02-28'),
+(3007, 'Place 29', '2020-01-29', '2020-02-29'),
+(3008, 'Place 30', '2020-01-30', '2020-03-01'),
+(3009, 'Place 31', '2020-03-01', '2020-05-10'),
+(3010, 'Place 32', '2020-03-01', '2020-06-10');
+
+INSERT INTO FormedBy (id, location, start_date, end_date)
+VALUES
+(5000, 'testing', '2020-09-03', '2020-10-11');
+
+
+
+
+
+CREATE TABLE GoesOn(
+ssn int,
+id int,
+PRIMARY KEY (ssn, id)
+);
+
+
+INSERT INTO GoesOn (ssn, id)
+VALUES
+(100,1000),
+(100,1001),
+(100,1002),
+(100,2000),
+(100,2001),
+(100,2002),
+(100,3000),
+
+(101,1003),
+(101,1004),
+(101,1005),
+(101,2003),
+(101,2004),
+(101,2005),
+(101,3001),
+
+(102,1006),
+(102,1007),
+(102,1008),
+(102,2006),
+(102,2007),
+(102,2008),
+(102,3002),
+
+(103,1009),
+(103,1010),
+(103,2009),
+(103,3003),
+
+(104,2010),
+(104,3004),
+
+(105,3005),
+(106,3006),
+(107,3007),
+(108,3008),
+(109,3009),
+(110,3010);
+
+
+
+
+
+
+
+
+
+CREATE TABLE Leg(
+location varchar(100),
+start_date Date,
+end_date Date,
+PRIMARY KEY ( location, start_date, end_date)
+);
+
+
+
+INSERT INTO Leg (location, start_date, end_date)
+VALUES
+('Florida',  '2020-01-01', '2020-01-10'),
+('Georgia',  '2020-01-10', '2020-01-15'),
+('NY',       '2020-01-15', '2020-01-20'),
+('Main',     '2020-01-20', '2020-01-25'),
+('Place 1',  '2020-01-01', '2020-01-05'),
+('Place 2',  '2020-01-05', '2020-01-13'),
+('Place 3',  '2020-01-13', '2020-01-19'),
+('Place 2',  '2020-01-02', '2020-01-10'),
+('Place 3',  '2020-01-03', '2020-01-10'),
+('Place 4',  '2020-01-04', '2020-01-10'),
+('Place 5',  '2020-01-05', '2020-01-10'),
+('Place 6',  '2020-01-06', '2020-01-10'),
+('Place 7',  '2020-01-07', '2020-01-10'),
+('Place 8',  '2020-01-08', '2020-01-10'),
+('Place 9',  '2020-01-09', '2020-01-10'),
+('Place 10', '2020-01-10', '2020-02-10'),
+('Place 11', '2020-01-11', '2020-02-11'),
+('Place 12', '2020-01-12', '2020-02-12'),
+('Place 13', '2020-01-13', '2020-02-13'),
+('Place 14', '2020-01-14', '2020-02-14'),
+('Place 15', '2020-01-15', '2020-02-15'),
+('Place 16', '2020-01-16', '2020-02-16'),
+('Place 17', '2020-01-17', '2020-02-17'),
+('Place 18', '2020-01-18', '2020-02-18'),
+('Place 19', '2020-01-19', '2020-02-19'),
+('Place 20', '2020-01-20', '2020-02-20'),
+('Place 21', '2020-01-21', '2020-02-21'),
+('Place 22', '2020-01-22', '2020-02-22'),
+('Place 23', '2020-01-23', '2020-02-23'),
+('Place 24', '2020-01-24', '2020-02-24'),
+('Place 25', '2020-01-25', '2020-02-25'),
+('Place 26', '2020-01-26', '2020-02-26'),
+('Place 27', '2020-01-27', '2020-02-27'),
+('Place 28', '2020-01-28', '2020-02-28'),
+('Place 29', '2020-01-29', '2020-02-29'),
+('Place 30', '2020-01-30', '2020-03-01'),
+('Place 31', '2020-03-01', '2020-05-10'),
+('Place 32', '2020-03-01', '2020-06-10');
+
+
+
+
+
+CREATE TABLE Owns(
+ssn int,
+passport_number int,
+country varchar(50),
+PRIMARY KEY (ssn, passport_number, country)
+);
+
+
+INSERT INTO Owns (ssn, passport_number, country)
+VALUES
+(100, 0, 'USA'),
+(101, 1, 'Brazil'),
+(102, 2, 'Canada'),
+(103, 3, 'Canada'),
+(104, 4, 'Brazil'),
+(105, 5, 'Country 1'),
+(106, 6, 'Country 2'),
+(107, 7, 'Country 3'),
+(108, 8, 'Country 4'),
+(109, 9, 'Country 5'),
+(110, 10, 'USA');
+
+
+
+
+
+
+
+
+
+CREATE TABLE Passport(
+number int,
+country varchar(50),
+expiration_date Date,
+owner varchar(50),
+PRIMARY KEY(number, country)
+);
+
+
+
+
+INSERT INTO Passport (number, country, expiration_date, owner)
+VALUES
+(0, 'USA', '2030-01-01', 'Albert'),
+(1, 'Brazil', '2030-01-01', 'Barry'),
+(2, 'Canada', '2030-01-01', 'Cody'),
+(3, 'Canada', '2030-01-01', 'Dawg'),
+(4, 'Brazil', '2030-01-01', 'Ellroy'),
+(5, 'Country 1', '2030-01-01', 'Frank'),
+(6, 'Country 2', '2030-01-01', 'George'),
+(7, 'Country 3', '2030-01-01', 'Harry'),
+(8, 'Country 4', '2030-01-01', 'Isiah'),
+(9, 'Country 5', '2030-01-01', 'Jacob'),
+(10, 'USA', '2030-01-01', 'Koby');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INSERT INTO TravelAgent(name, years_experience, phone)
+VALUES
+('James Bond', 30, '007-007-007'),
+('Agent2', 2, '222-222-2222'),
+('A3', 13, '333-333-3333');
+
+
+__________________________________________________
+
+1)	SELECT DISTINCT agent
+	FROM Booking
+	INNER JOIN Traveler ON traveler_ssn = ssn
+	WHERE traveler.name = 'pete';
+
+
+	SELECT DISTINCT agent
+	FROM Booking
+	INNER JOIN Traveler ON traveler_ssn = ssn
+	WHERE traveler.name = 'Albert';
+
+2)	
+	SELECT *,
+		COUNT(agent) AS occurrence
+	FROM Booking
+	GROUP BY agent
+	ORDER BY occurrence DESC
+	LIMIT 1;
+
+
+	SELECT *, COUNT(agent) AS occurrence
+	FROM TravelAgent
+	JOIN Booking ON agent = name
+	GROUP BY agent
+	HAVING occurrence = MAX()
+	ORDER BY occurrence DESC;
+
+	
+	SELECT *
+	FROM TravelAgent
+	JOIN (
+		SELECT *,
+			COUNT(agent) AS occurrence
+		FROM Booking
+		GROUP BY agent);
+
+
+
+	SELECT T.name, T.phone
+	FROM TravelAgent T
+	WHERE T.name
+	(
+		SELECT agent
+		FROM Booking
+		HAVING COUNT(agent) =
+			(
+				SELECT MAX(thiscount)
+				FROM
+				(
+					SELECT COUNT(agent) thiscount
+					FROM Booking
+				)
+			)
+	);
+
+
+	SELECT *,
+		COUNT(agent) AS occurrence
+	FROM Booking
+	JOIN travelagent ON Booking.agent = TravelAgent.name
+	GROUP BY agent
+
+
+
+	SELECT name, phone
+	FROM TravelAgency
+	JOIN Booking ON Booking.agent = TravelAgent.name
+	WHERE name =
+	(	
+		SELECT agent, MAX(mycount)
+		FROM
+		(
+			SELECT agent, phone, COUNT(agent) AS mycount
+			FROM Booking
+			JOIN travelagent ON Booking.agent = TravelAgent.name
+			GROUP BY agent
+		)
+		GROUP BY name
+	)
+	GROUP BY name
+
+
+	SELECT agent, phone
+	FROM
+	(
+		SELECT agent, phone, COUNT(agent) AS mycount
+		FROM Booking
+		JOIN travelagent ON Booking.agent = TravelAgent.name
+		GROUP BY agent
+	) s
+	HAVING mycount = MAX(mycount)
+
+
+
+	SELECT name, phone, COUNT(name) AS mycount
+	FROM TravelAgent
+	JOIN Booking ON TravelAgent.name = Booking.agent
+	GROUP BY agent
+	HAVING mycount = MAX(mycount)
+
+
+	SELECT name, phone
+	FROM 
+	(
+		SELECT COUNT(traveler_ssn) AS mycount
+		FROM TravelAgent
+		JOIN Booking ON TravelAgent.name = Booking.agent
+		GROUP BY agent		
+	)
+	WHERE mycount = 
+	(
+		SELECT MAX(mycount)
+		FROM
+		(
+			SELECT name, phone, COUNT(name) mycount
+			FROM TravelAgent
+			JOIN Booking ON TravelAgent.name = Booking.agent
+			GROUP BY agent
+		) T
+	);
+
+
+	3)
+		SELECT AVG(count)
+		FROM
+		(
+			SELECT COUNT(id) AS count
+			FROM FormedBy
+			GROUP BY id
+		) Average;
+
+		b.	SELECT AVG(count)
+FROM
+(
+	SELECT COUNT(id) AS count
+	FROM FormedBy
+	GROUP BY id
+) Average;
+
+
+
+4)
+
+	SELECT DISTINCT id, start_location, end_location
+	FROM trip;

@@ -1,0 +1,58 @@
+Koby Miller
+Section number: 11207
+Assignment number: 9
+Date due: 4/17/2020
+
+
+
+1)
+DELIMITER |
+CREATE TRIGGER new_agent
+BEFORE INSERT ON booking
+FOR EACH ROW
+BEGIN
+	IF NEW.agent NOT IN (SELECT agent FROM booking) THEN
+		INSERT INTO travelagent(name, years_experience, phone)
+		VALUES(NEW.agent, 0, null);
+	END IF;
+END |
+DELIMITER ;
+
+
+
+
+
+
+
+2)
+DELIMITER |
+CREATE FUNCTION compare_dates(date_1 DATE, date_2 DATE)
+RETURNS INT
+BEGIN
+	IF (date_1 < date_2) THEN
+		RETURN -1;
+	ELSEIF (date_1 = date_2) THEN
+		RETURN 0;
+	ELSE (date_1 > date_2) THEN
+		RETURN 1;
+	END IF;
+END |
+DELIMITER ;
+
+
+
+
+
+
+
+3)
+DELIMITER |
+CREATE TRIGGER fix_dates
+BEFORE INSERT ON trip
+FOR EACH ROW
+BEGIN
+	IF NEW.start_date > NEW.end_date THEN
+		SET NEW.end_date = NEW.start_date;
+	END IF;
+END |
+DELIMITER ;

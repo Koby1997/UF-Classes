@@ -1,0 +1,10 @@
+
+State Machine - |top_level|gcd:U_GCD|ctrl2:CONTROLLER|state
+Name state.STALL state.FINAL state.X_GREATER_THAN state.X_LESS_THAN state.CHECK_COMP state.INIT state.START 
+state.START 0 0 0 0 0 0 0 
+state.INIT 0 0 0 0 0 1 1 
+state.CHECK_COMP 0 0 0 0 1 0 1 
+state.X_LESS_THAN 0 0 0 1 0 0 1 
+state.X_GREATER_THAN 0 0 1 0 0 0 1 
+state.FINAL 0 1 0 0 0 0 1 
+state.STALL 1 0 0 0 0 0 1 

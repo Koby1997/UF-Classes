@@ -1,0 +1,62 @@
+Message Patrel on canvas
+
+snapshot: saving kernel at specific point in time
+take snapshot when finished with project
+
+dont do -j4
+
+
+whenever you make a change do this:
+
+cd /usr/rep/src/reptilian-kernel
+this is where you do:
+make && sudo make install && sudo make modules_install
+
+
+for using sftp
+open orange and do:
+cd /mnt/c/Users/Koby/desktop/School/Fall2020/OS/FromVM
+now you are in your local school folder
+sftp reptilian@192.168.221.129
+
+go to where you want in the VM and just do
+get fileName.txt
+
+
+
+
+Ex2: uses .h .c files
+know how to compile them
+understand makefiles
+
+
+P1
+
+
+EX3:
+for debugger, use breakpoints, steps, next. in case decompile use: gdb -q exicutable
+then use info functions
+dissasemble funciton_name
+
+
+
+EX4:
+C:\Users\Koby\AppData\Local\Android\Sdk\platform-tools\adb.exe connect 192.168.221.129
+
+
+
+
+P3:
+
+FUSE runs in background
+creates directory that is our file system
+powerpoint on file systems
+
+
+??
+first tutorial is documentation
+second tutorial
+
+
+https://www.geeksforgeeks.org/depth-n-ary-tree/
+

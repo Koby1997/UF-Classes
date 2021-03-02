@@ -1,0 +1,48 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATxmega128A1U"</DEVICE>
+ <WORKING_DIR>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.1.68\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\lab5_7.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.1.68\avrasm\inc\ATxmega128a1udef.inc</FILE>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.1.68\avrasm\inc\ATxmega128A1Udef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\Debug\Lab5.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Lab5.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Lab5.map</FILE>
+  <FILE>Lab5.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <MAIN><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\lab5_7.asm</FILE><LINE>39</LINE></MAIN>
+  <RECEIVE_COMPLETE_ISR><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\lab5_7.asm</FILE><LINE>267</LINE></RECEIVE_COMPLETE_ISR>
+  <IO_INIT><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\lab5_7.asm</FILE><LINE>74</LINE></IO_INIT>
+  <USART_INIT><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\lab5_7.asm</FILE><LINE>101</LINE></USART_INIT>
+  <INTR_INIT><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\lab5_7.asm</FILE><LINE>132</LINE></INTR_INIT>
+  <MAIN_LOOP><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\lab5_7.asm</FILE><LINE>58</LINE></MAIN_LOOP>
+  <DONE><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\lab5_7.asm</FILE><LINE>67</LINE></DONE>
+  <OUT_CHAR><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\lab5_7.asm</FILE><LINE>160</LINE></OUT_CHAR>
+  <TX_POLL><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\lab5_7.asm</FILE><LINE>163</LINE></TX_POLL>
+  <OUT_STRING><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\lab5_7.asm</FILE><LINE>177</LINE></OUT_STRING>
+  <NEXT_LETTER><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\lab5_7.asm</FILE><LINE>181</LINE></NEXT_LETTER>
+  <OUT_STRING_TWO><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\lab5_7.asm</FILE><LINE>190</LINE></OUT_STRING_TWO>
+  <NEXT_LETTER_TWO><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\lab5_7.asm</FILE><LINE>197</LINE></NEXT_LETTER_TWO>
+  <IN_CHAR><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\lab5_7.asm</FILE><LINE>208</LINE></IN_CHAR>
+  <RX_POLL><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\lab5_7.asm</FILE><LINE>210</LINE></RX_POLL>
+  <IN_STRING><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\lab5_7.asm</FILE><LINE>223</LINE></IN_STRING>
+  <READ_NEXT><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\lab5_7.asm</FILE><LINE>225</LINE></READ_NEXT>
+  <CARRIAGE><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\lab5_7.asm</FILE><LINE>248</LINE></CARRIAGE>
+  <BACKSPACE><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\lab5_7.asm</FILE><LINE>254</LINE></BACKSPACE>
+  <EMPTY_REG><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\lab5_7.asm</FILE><LINE>277</LINE></EMPTY_REG>
+  <SKIP><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab5\Lab5\Lab5\lab5_7.asm</FILE><LINE>291</LINE></SKIP>
+ </LABELS>
+</ASSEMBLER_INFO>

@@ -1,0 +1,590 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/quizes
+Eadder
+Z0 w1568923403
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3
+Z4 8C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/adder.vhd
+Z5 FC:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/adder.vhd
+l0
+L4
+Vj;4B[;mfF?n`d96XIj??42
+!s100 >bc]ghmEKZZV416`k[;3R1
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1568936024
+!i10b 1
+Z8 !s108 1568936024.000000
+Z9 !s90 -reportprogress|300|-work|lab3|-2002|-explicit|-stats=none|C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/adder.vhd|
+Z10 !s107 C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/adder.vhd|
+!i113 1
+Z11 o-work lab3 -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Acarry_lookahead_bad_synthesis
+R1
+R2
+Z13 DEx4 work 5 adder 0 22 j;4B[;mfF?n`d96XIj??42
+l187
+L186
+V:;ozB0hN?02:Xnh>dCMnm0
+!s100 Q`XM?_eWo74>8XPQBJ9C^3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Acarry_lookahead
+R1
+R2
+R13
+l111
+L109
+Vlj4BgdZ<E:9n1d<ioJmY23
+!s100 06bo@l9DkQb9T]API`YJY3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ahierarchical
+R1
+R2
+R13
+l69
+L41
+VX]N1_Tn9HX`CNb9@HK9`92
+!s100 >@UnbK8]RXJ?;RM8E;K2A1
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aripple_carry
+R1
+R2
+R13
+l27
+L14
+VSU?MY6hzcDn]CSRz_NFVM0
+!s100 <K;@H33N6>Ngb1:@SKeMG3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eadder_tb
+Z14 w1568924529
+Z15 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R1
+R2
+R3
+Z16 8C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/adder_tb.vhd
+Z17 FC:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/adder_tb.vhd
+l0
+L5
+VT18em@FCnN^nlgXhPn;X03
+!s100 Vmck=mKlhilEkHZULFzAN0
+R6
+32
+R7
+!i10b 1
+R8
+Z18 !s90 -reportprogress|300|-work|lab3|-2002|-explicit|-stats=none|C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/adder_tb.vhd|
+Z19 !s107 C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/adder_tb.vhd|
+!i113 1
+R11
+R12
+Atb
+R15
+R1
+R2
+Z20 DEx4 work 8 adder_tb 0 22 T18em@FCnN^nlgXhPn;X03
+l36
+L9
+VQl?eAVg0lkl]AocMj0nR]3
+!s100 41i3=hV`;GV4E=2PSz_z02
+R6
+32
+R7
+!i10b 1
+R8
+R18
+R19
+!i113 1
+R11
+R12
+Eadder_top
+Z21 w1568934414
+R1
+R2
+R3
+Z22 8C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/adder_top.vhd
+Z23 FC:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/adder_top.vhd
+l0
+L4
+VYEMCdADET40<EXX>OQ4YM2
+!s100 HIG0fNCD86f2eFha6Fm791
+R6
+32
+R7
+!i10b 1
+R8
+Z24 !s90 -reportprogress|300|-work|lab3|-2002|-explicit|-stats=none|C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/adder_top.vhd|
+Z25 !s107 C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/adder_top.vhd|
+!i113 1
+R11
+R12
+Astr
+R1
+R2
+Z26 DEx4 work 9 adder_top 0 22 YEMCdADET40<EXX>OQ4YM2
+l37
+L16
+VKIW;kGzBZ[lObWTJD1SK60
+!s100 ;;NGZL:zGcL=V?XhgM1kI0
+R6
+32
+R7
+!i10b 1
+R8
+R24
+R25
+!i113 1
+R11
+R12
+Astructure
+Z27 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z28 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 b:4^GQG9SgzacjAmO=9`O0
+Z29 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+R1
+R2
+Z30 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 3g0@koWcWFU4ch:4ZJbzl1
+DEx4 work 9 adder_top 0 22 1^H87gjhTzM4D;@4;2?j52
+l214
+L135
+VIN5E31E`LRI`E4IREc9RT0
+!s100 dkUQW:b7bg=k^0a@6K_AU1
+R6
+32
+Z31 !s110 1568936023
+!i10b 1
+Z32 !s108 1568936023.000000
+Z33 !s90 -reportprogress|300|-work|lab3|-2002|-explicit|-stats=none|C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/simulation/modelsim/Lab3.vho|
+Z34 !s107 C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/simulation/modelsim/Lab3.vho|
+!i113 1
+R11
+R12
+Z35 FC:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/simulation/modelsim/Lab3.vho
+Z36 w1568935431
+Z37 8C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/simulation/modelsim/Lab3.vho
+Cadder_top_config
+eadder_top
+aSTR
+Z38 DEx4 work 11 decoder7seg 0 22 1<JlINI0[8R_b3C>K?iAm1
+R13
+DAx4 work 9 adder_top 3 str 22 KIW;kGzBZ[lObWTJD1SK60
+R1
+R2
+R26
+R21
+R3
+R22
+R23
+l0
+L55
+VP;_:QbYHRBN>YBnJZ`zoH3
+!s100 fOBada9z_m621EK8zSiJ_0
+R6
+32
+R7
+!i10b 1
+R8
+R24
+R25
+!i113 1
+R11
+R12
+Ecgen
+Z39 w1568861348
+R1
+R2
+R3
+Z40 8C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/cgen2.vhd
+Z41 FC:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/cgen2.vhd
+l0
+L4
+V]H40T<]CG^cPGQTo6nYo>0
+!s100 oJ?eM=o==iWGo?hR3581_1
+R6
+32
+R7
+!i10b 1
+R8
+Z42 !s90 -reportprogress|300|-work|lab3|-2002|-explicit|-stats=none|C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/cgen2.vhd|
+Z43 !s107 C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/cgen2.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R1
+R2
+DEx4 work 4 cgen 0 22 ]H40T<]CG^cPGQTo6nYo>0
+l13
+L11
+VlkkeXF9AXL@8CXffo]OD]1
+!s100 CJUgMZOI[F0cbP3aFg@D13
+R6
+32
+R7
+!i10b 1
+R8
+R42
+R43
+!i113 1
+R11
+R12
+Ecla
+Z44 w1568874306
+R1
+R2
+R3
+Z45 8C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/cla2.vhd
+Z46 FC:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/cla2.vhd
+l0
+L4
+VLm4C7[3<W]49=2B^bPWRB1
+!s100 db=RYIJF>;Fc4^d5K`KCW1
+R6
+32
+R7
+!i10b 1
+R8
+Z47 !s90 -reportprogress|300|-work|lab3|-2002|-explicit|-stats=none|C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/cla2.vhd|
+Z48 !s107 C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/cla2.vhd|
+!i113 1
+R11
+R12
+Astr
+R1
+R2
+DEx4 work 3 cla 0 22 Lm4C7[3<W]49=2B^bPWRB1
+l17
+L15
+VHVFIY<Bi4^<aG;fhJ69c@2
+!s100 >E]U@;>O<1ne=Z00LWJ:U3
+R6
+32
+R7
+!i10b 1
+R8
+R47
+R48
+!i113 1
+R11
+R12
+Ecla4
+Z49 w1568923172
+R1
+R2
+R3
+Z50 8C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/cla4.vhd
+Z51 FC:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/cla4.vhd
+l0
+L4
+VmkFdFSHJJgYn_d754[Xnl0
+!s100 VHl9P4bRHzliiFG5b[kQO2
+R6
+32
+Z52 !s110 1568936025
+!i10b 1
+Z53 !s108 1568936025.000000
+Z54 !s90 -reportprogress|300|-work|lab3|-2002|-explicit|-stats=none|C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/cla4.vhd|
+Z55 !s107 C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/cla4.vhd|
+!i113 1
+R11
+R12
+Abhv
+R1
+R2
+DEx4 work 4 cla4 0 22 mkFdFSHJJgYn_d754[Xnl0
+l40
+L16
+VU;RKjJmeXGEb;=0`j:[m[3
+Z56 !s100 C<Q2e6HM;mj9JCL2CcYlD1
+R6
+32
+R52
+!i10b 1
+R53
+R54
+R55
+!i113 1
+R11
+R12
+Ede10_lite_golden_top
+Z57 w1568922080
+R27
+R28
+R29
+R1
+R2
+R30
+R3
+R37
+R35
+l0
+L88
+V6d`F`ojPn5l_gLj]6E8fY3
+!s100 ?c>=CFLIIN>i8^Z3BbQeP0
+R6
+32
+Z58 !s110 1568924091
+!i10b 1
+Z59 !s108 1568924091.000000
+Z60 !s90 -reportprogress|300|-work|Lab3|-2002|-explicit|-stats=none|C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/simulation/modelsim/Lab3.vho|
+R34
+!i113 1
+Z61 o-work Lab3 -2002 -explicit
+R12
+Astructure
+R27
+R28
+R29
+R1
+R2
+R30
+DEx4 work 20 de10_lite_golden_top 0 22 6d`F`ojPn5l_gLj]6E8fY3
+l633
+L317
+V2XHoi=f3kcC;_m0^WKk?F3
+!s100 l[n[zGOjF2Nf;1`DWm99b0
+R6
+32
+R58
+!i10b 1
+R59
+R60
+R34
+!i113 1
+R61
+R12
+Edecoder7seg
+Z62 w1568926181
+R1
+R2
+R3
+Z63 8C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/decoder7seg.vhd
+Z64 FC:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/decoder7seg.vhd
+l0
+L5
+V1<JlINI0[8R_b3C>K?iAm1
+!s100 IG3SU8;im6lH33KV9`PYM2
+R6
+32
+R7
+!i10b 1
+R8
+Z65 !s90 -reportprogress|300|-work|lab3|-2002|-explicit|-stats=none|C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/decoder7seg.vhd|
+Z66 !s107 C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/decoder7seg.vhd|
+!i113 1
+R11
+R12
+Astructure
+R1
+R2
+R38
+l13
+L12
+VQ;i;IU?2<IPCE3dI3XJj40
+!s100 3H86P65<n7ca<;?EU3_4I3
+R6
+32
+R7
+!i10b 1
+R8
+R65
+R66
+!i113 1
+R11
+R12
+Efa
+Z67 w1568858241
+R1
+R2
+R3
+Z68 8C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/fa.vhd
+Z69 FC:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/fa.vhd
+l0
+L6
+Vh?c1P>gLW5GCN?>JK[J6e2
+!s100 g9Q9fAEa2^KI67bDNNN3V3
+R6
+32
+R7
+!i10b 1
+R8
+Z70 !s90 -reportprogress|300|-work|lab3|-2002|-explicit|-stats=none|C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/fa.vhd|
+Z71 !s107 C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/fa.vhd|
+!i113 1
+R11
+R12
+Abhv
+R1
+R2
+DEx4 work 2 fa 0 22 h?c1P>gLW5GCN?>JK[J6e2
+l18
+L17
+VM=7<hSVa@SONLRhR9:Z_W2
+!s100 A4lg;F[AGQHW`T_1JI4jH2
+R6
+32
+R7
+!i10b 1
+R8
+R70
+R71
+!i113 1
+R11
+R12
+Ehard_block
+R36
+R27
+R28
+R29
+R1
+R2
+R30
+R3
+R37
+R35
+l0
+L34
+Vn;52P4EJ0DAcJlDOZSeRg1
+!s100 ROH=D<N4CT6aCZ<37A[_?0
+R6
+32
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R11
+R12
+Astructure
+R27
+R28
+R29
+R1
+R2
+R30
+DEx4 work 10 hard_block 0 22 n;52P4EJ0DAcJlDOZSeRg1
+l75
+L53
+VG9IQa2ij5c7ZZNLn?UZPS0
+!s100 zW6ML5NVY?Ai`]`n2XhME3
+R6
+32
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R11
+R12
+Ehybrid
+Z72 w1568875186
+R1
+R2
+R3
+Z73 8C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/hybrid2.vhd
+Z74 FC:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/hybrid2.vhd
+l0
+L4
+V@8D7cY4NG5RgOD560[Tg]1
+!s100 V3IaO^gcQ_XZbG@`jNNR81
+R6
+32
+R7
+!i10b 1
+R8
+Z75 !s90 -reportprogress|300|-work|lab3|-2002|-explicit|-stats=none|C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/hybrid2.vhd|
+Z76 !s107 C:/Users/Koby/Desktop/School/Fall2019/DigitalDesign/Lab3/hybrid2.vhd|
+!i113 1
+R11
+R12
+Abhv
+R1
+R2
+DEx4 work 6 hybrid 0 22 @8D7cY4NG5RgOD560[Tg]1
+l29
+L13
+V9d>RE7JN5Wk>aoh][57P[2
+!s100 9ZoQmHe6T9d56:JVZdSPl1
+R6
+32
+R7
+!i10b 1
+R8
+R75
+R76
+!i113 1
+R11
+R12
+Ctb_config
+eadder_tb
+aTB
+R13
+DAx4 work 8 adder_tb 2 tb 22 Ql?eAVg0lkl]AocMj0nR]3
+R15
+R1
+R2
+R20
+R14
+R3
+R16
+R17
+l0
+L233
+V4LEdebWUeKFe]A0OY7VaD2
+!s100 bNZY^WL12aXFllaWgTF4H0
+R6
+32
+R7
+!i10b 1
+R8
+R18
+R19
+!i113 1
+R11
+R12

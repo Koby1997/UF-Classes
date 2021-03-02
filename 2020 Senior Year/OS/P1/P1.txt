@@ -1,0 +1,50 @@
+.TH P1
+.SH Name
+P1 - The Command Line
+.SH Synopsis
+Creating multiple new system calls along with harness functions
+
+.SH Files changed
+/usr/rep/src/reptilian-kernel/arch/x86/entry/syscalls/syscall_64.tbl
+/usr/rep/src/reptilian-kernel/include/linux/syscalls.h
+/usr/rep/src/reptilian-kernel/kernel/sys.c
+
+.SH How I implemented each new system call
+.B Step(1)
+Added my syscalls to the "syscall_64.tbl" to act as the entry point.
+.PP
+
+.B Step(2)
+In order to link the system calls properly, I add the asmlinkage prototype to "syscalls.h".
+.PP
+
+.B Step(3)
+Lastly, I defined my syscalls at the end of "sys.c". This is where all of the logic happens like seeing if the new_level is a valid input, or if the message should print. The kernel-wide variable "process_log_level" is also initialized here.
+.PP
+
+.B Step(4)
+Outside of the Kernel, I created the "process_log" directory which then contains the "process_log.c" and ".h" files. I also have a Makefile here that uses those ".c" and ".h" files to make "process_log.o" and "libprocess_log.a".
+.PP
+
+.SH Testing
+I mainly used the tests given to us and originally had many printk statements to help me follow variables. 
+
+.SH Problems
+I honestly was stuck for the longest time because I thought the code that I put into "syscalls.h" and "sys.c" was supposed to go into "process_log.h" and "process_log.c". I didn't know how everything connected like that, but after a long time I figured it out. Every tutorial I read through or watched all had their directory inside the Kernel and would say things like "The SYSCALL_DEFINE can go anywhere, we are just going to put it in this file". So from that I took that we needed to place it in our own directory.
+Also, I could not figure out how to print the message for the proc_log_message function. I learned that kernel code cannot follow a pointer into user-space but couldn't find a way to solve this. I tried multiple things like passing the message differently or using copy_from_user. Anyway I tried, I either bricked my machine or the message was "null".
+I didn't get to test the harness functions that much so there are probably a ton of bugs in those, but from my understanding, they pretty much just return what the sycalls return (my understanding is most likely wrong though).
+
+.SH Sources
+https://www.youtube.com/watch?v=AP-tBd84vbM
+https://www.kernel.org/doc/html/v4.10/process/adding-syscalls.html
+https://brennan.io/2016/11/14/kernel-dev-ep3/#:~:text=In%20fact%2C%20a%20system%20call,do%20something%20on%20your%20behalf.&text=In%20fact%2C%20the%20modern%20way,to%20make%20a%20system%20call.
+https://dev.to/omergulen/how-to-add-system-call-syscall-that-prints-elapsed-time-of-a-process-with-given-pid-to-the-kernel-and-test-it-335c
+https://news.ycombinator.com/item?id=19225268
+https://medium.com/@ssreehari/implementing-a-system-call-in-linux-kernel-4-7-1-6f98250a8c38
+
+.SH Video link
+https://youtu.be/K3pGX2jhMKw
+
+
+.SH AUTHOR
+Koby Miller

@@ -1,0 +1,105 @@
+C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab5/subtractor2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab5/subtractor2.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity subtractor2
+-- Compiling architecture BHV of subtractor2
+
+} {} {}} C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab5/comparator.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab5/comparator.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity comparator
+-- Compiling architecture BHV of comparator
+
+} {} {}} C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab5/decoder7seg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab5/decoder7seg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity decoder7seg
+-- Compiling architecture BHV of decoder7seg
+
+} {} {}} C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab5/datapath1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab5/datapath1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity datapath1
+-- Compiling architecture STR of datapath1
+-- Loading entity mux2x1
+-- Loading entity reg
+-- Loading entity subtractor1
+-- Loading entity comparator
+
+} {} {}} C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab5/subtractor.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab5/subtractor.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity subtractor1
+-- Compiling architecture BHV of subtractor1
+
+} {} {}} C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab5/mux2x1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab5/mux2x1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux2x1
+-- Compiling architecture BHV of mux2x1
+
+} {} {}} C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab5/datapath2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab5/datapath2.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity datapath2
+-- Compiling architecture STR of datapath2
+-- Loading entity mux2x1
+-- Loading entity reg
+-- Loading entity subtractor2
+-- Loading entity comparator
+
+} {} {}} C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab5/gcd.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab5/gcd.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity gcd
+-- Compiling architecture FSMD of gcd
+-- Compiling architecture FSM_D1 of gcd
+-- Loading entity gcd
+-- Loading entity datapath1
+-- Loading entity ctrl1
+-- Compiling architecture FSM_D2 of gcd
+-- Loading entity gcd
+-- Loading entity datapath2
+-- Loading entity ctrl2
+-- Compiling architecture FSMD2 of gcd
+-- Loading entity gcd
+
+} {} {}} C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab5/reg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab5/reg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity reg
+-- Compiling architecture BHV of reg
+
+} {} {}} C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab5/ctrl1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Koby/Desktop/School/Spring2020/DigitalDesign/Lab5/ctrl1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ctrl1
+-- Compiling architecture BHV of ctrl1
+
+} {} {}}

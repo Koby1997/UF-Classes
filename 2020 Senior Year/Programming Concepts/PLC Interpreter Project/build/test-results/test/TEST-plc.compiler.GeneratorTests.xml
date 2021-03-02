@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="plc.compiler.GeneratorTests" tests="11" skipped="0" failures="0" errors="0" timestamp="2020-12-17T04:37:33" hostname="DESKTOP-5462HHE" time="0.167">
+  <properties/>
+  <testcase name="testSimplePrint()" classname="plc.compiler.GeneratorTests" time="0.056"/>
+  <testcase name="testDeclarationsmall()" classname="plc.compiler.GeneratorTests" time="0.011"/>
+  <testcase name="testWhileBig()" classname="plc.compiler.GeneratorTests" time="0.031"/>
+  <testcase name="testGroup()" classname="plc.compiler.GeneratorTests" time="0.004"/>
+  <testcase name="testIfBig()" classname="plc.compiler.GeneratorTests" time="0.012"/>
+  <testcase name="testLiteral()" classname="plc.compiler.GeneratorTests" time="0.007"/>
+  <testcase name="testBiggerPrint()" classname="plc.compiler.GeneratorTests" time="0.001"/>
+  <testcase name="testWhileSmall()" classname="plc.compiler.GeneratorTests" time="0.002"/>
+  <testcase name="testIfsmall()" classname="plc.compiler.GeneratorTests" time="0.005"/>
+  <testcase name="testExpression()" classname="plc.compiler.GeneratorTests" time="0.006"/>
+  <testcase name="testDeclarationBig()" classname="plc.compiler.GeneratorTests" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,62 @@
+.TH P2
+.SH Name
+P2: POSIX Standards & Bindings
+.SH Synopsis
+Reading/displaying .txt files with POSIX calls and through a GUI provided.
+
+.SH Files Created/Changed
+Created: 
+.br 
+/home/reptilian/displayfile/displayfile.cpp
+.br 
+/home/reptilian/displayfile/read_file.cpp\
+.br 
+/home/reptilian/displayfile/read_file.h
+.br 
+(these were also added to /P2/app/src/main/cpp)
+.br
+.br
+Changed:
+.br
+/P2/app/src/main/cpp/native-calls.cpp
+.br
+/P2/app/src/main/java/edu.ufl.cise.os.p2/P2Activity.java
+.br
+/P2/app//CMakeLists.txt
+.br
+/P2/app/src/main/res/layout/activity_p2.xml
+
+.SH How I used POSIX calls
+This part was pretty simple. I just used the 'open' call to establish a connection with the file I want to read. This is where I can check for our 'Error: File Not Found'. I then 'read' the contents of the file and put it into a buffer I allocated memory for, and then I 'close' the connection I originally opened. I needed to import fcntl.h and unistd.h for these POSIX calls.
+
+.SH How I managed memory
+First, I used 'lseek' to find the size of the buffer I would need in order display the whole file. Once I found that size I used 'malloc' to allocate memory for a pointer that will be passed to my displayfile function. As soon as displayfile is finished with it, it uses 'free' to deallocate that memory. I talk about this some more in the Problems section.
+
+.SH How I used JNI
+This was one of the trickier parts for me even though we had an example and now it seems pretty straighforward. I started by creating the native methods. (we only needed to make one for displayfile, but I made one for read_file for extra practice). This was basically just converting types so that the c++ and java could work together. I think I mainly got stuck on trying to follow the example closely but being confused on how exactly to connect our c++ files because the example didn't have a c++ file. This is where I figured out how to changeCMakeLists.txt to add my files.
+
+.SH How I used the GUI
+This part was very simple. I just created a method that is called when the submit button is pressed. It took the text int he filenameBox and made it a string and passed that onto my displayfile function. Also I made the displayBox bigger and have a scroll bar to see larger text files.
+
+.SH Testing
+I made some test files that call just my read or display function to make sure that I was reading the files correctly. I also made may different types of files to read (long, short, empty, only numbers, etc.). To test my memory leakage I used the profile tool a lot. I also went back and forth a lot between Reptilian and Android studio after I got my Reptilian one to work. This helped me understand what my Android studio code should do once I changed it.
+
+.SH Problems
+The little bit of problems I ran into were mainly just error due to me being tired and overthinking. One problem I was having for a bit thought was big memory leaks. I understood that I needed to free the memory that was allocated but the way I originally wrote it, I was returning a pointer from my displayfile funciton and was trying to free the memory afterwards. I for some reason was stuck on the idea that I had to return a pointer, and not a string.
+
+.SH Sources
+https://erev0s.com/blog/add-jnicc-your-existing-android-app/
+https://www.protechtraining.com/content/java_fundamentals_tutorial-_java_native_interface_jni
+https://www.studytonight.com/android/get-edittext-set-textview
+https://developer.android.com/studio/profile/memory-profiler
+https://developer.android.com/training/basics/firstapp/starting-activity#java
+https://developer.android.com/reference/android/view/View
+https://developer.android.com/studio/projects/configure-cmake
+https://pubs.opengroup.org/onlinepubs/009695399/functions/open.html
+https://pubs.opengroup.org/onlinepubs/009695399/functions/read.html
+https://pubs.opengroup.org/onlinepubs/009695399/functions/close.html
+And a lot of stack overflow haha
+
+
+.SH AUTHOR
+Koby Miller

@@ -1,0 +1,9 @@
+Analysis & Synthesis Status : Successful - Wed Feb 05 17:48:50 2020
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : Lab3Ripple
+Top-level Entity Name : adder_top
+Family : MAX II
+Total logic elements : 24
+Total pins : 26
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

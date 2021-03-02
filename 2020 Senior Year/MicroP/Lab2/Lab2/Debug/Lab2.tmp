@@ -1,0 +1,38 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATxmega128A1U"</DEVICE>
+ <WORKING_DIR>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab2\Lab2\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.1.68\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab2\Lab2\lab2_4.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.1.68\avrasm\inc\ATxmega128a1udef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab2\Lab2\Debug\Lab2.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Lab2.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Lab2.map</FILE>
+  <FILE>Lab2.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <ANIMATION><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab2\Lab2\lab2_4.asm</FILE><LINE>36</LINE></ANIMATION>
+  <MAIN><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab2\Lab2\lab2_4.asm</FILE><LINE>49</LINE></MAIN>
+  <IO_INIT><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab2\Lab2\lab2_4.asm</FILE><LINE>256</LINE></IO_INIT>
+  <TC_INIT><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab2\Lab2\lab2_4.asm</FILE><LINE>292</LINE></TC_INIT>
+  <EDIT><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab2\Lab2\lab2_4.asm</FILE><LINE>85</LINE></EDIT>
+  <PLAY><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab2\Lab2\lab2_4.asm</FILE><LINE>168</LINE></PLAY>
+  <LOOP><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab2\Lab2\lab2_4.asm</FILE><LINE>125</LINE></LOOP>
+  <STORE_FRAME_SWITCH_RELEASE_WAIT_LOOP><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab2\Lab2\lab2_4.asm</FILE><LINE>152</LINE></STORE_FRAME_SWITCH_RELEASE_WAIT_LOOP>
+  <PLAY_LOOP><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab2\Lab2\lab2_4.asm</FILE><LINE>178</LINE></PLAY_LOOP>
+  <DIFFERENT_ADDRESS><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab2\Lab2\lab2_4.asm</FILE><LINE>213</LINE></DIFFERENT_ADDRESS>
+  <FRAME_LOOP><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab2\Lab2\lab2_4.asm</FILE><LINE>230</LINE></FRAME_LOOP>
+  <DONE><FILE>C:\Users\Koby\Desktop\School\Summer2020\MicroP\Lab2\Lab2\lab2_4.asm</FILE><LINE>243</LINE></DONE>
+ </LABELS>
+</ASSEMBLER_INFO>
